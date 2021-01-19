@@ -161,7 +161,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Coding',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -194,7 +194,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Mission',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -229,7 +229,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Arts',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -272,7 +272,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Sports',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -307,7 +307,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Yoga',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -342,7 +342,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Languages',
                                     style: TextStyle(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
