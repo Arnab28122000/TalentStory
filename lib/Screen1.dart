@@ -69,13 +69,13 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                     title: Text('Home')),
                 BottomNavigationBarItem(
                     icon: Icon(
-                      Icons.message_outlined,
+                      Icons.mail_outline,
                       color: Colors.purple,
                     ),
                     title: Text('Message')),
                 BottomNavigationBarItem(
                     icon: Icon(
-                      Icons.calendar_today,
+                      Icons.calendar_today_outlined,
                       color: Colors.purple,
                     ),
                     title: Text('to-do')),
@@ -102,23 +102,25 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               //centerTitle: true,
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.notification_important_outlined),
-                  color: Colors.white,
+                  icon: Icon(Icons.notification_important),
+                  color: Colors.black87,
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: Icon(Icons.search),
-                  color: Colors.white,
+                  color: Colors.black87,
                   onPressed: () {},
                 ),
               ],
               elevation: 0,
               leading: IconButton(
                 icon: Icon(Icons.menu),
-                color: Colors.white,
+                color: Colors.black87,
                 onPressed: () {},
               ),
             ),
+            floatingActionButton: FloatingActionButton(
+                onPressed: () {}, child: Icon(Icons.notes)),
             body: Container(
                 //margin: EdgeInsets.only(top: 5),
                 width: MediaQuery.of(context).size.width,
@@ -127,7 +129,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 decoration: BoxDecoration(color: Colors.white),
                 // borderRadius: BorderRadius.circular(30)),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -140,8 +142,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 height * _animation.value,
                                 height * _animation.value),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 border: Border.all(color: Colors.purple),
@@ -151,8 +153,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.code,
-                                    size: 50,
+                                    Icons.code_outlined,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -161,7 +163,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Coding',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -173,8 +175,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                             transform: Matrix4.translationValues(
                                 0, height * _animation1.value, 0),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -184,8 +186,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.emoji_objects,
-                                    size: 50,
+                                    Icons.emoji_emotions_outlined,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -194,7 +196,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Mission',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -208,8 +210,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 _animation2.value * height,
                                 0),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -220,7 +222,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 children: [
                                   Icon(
                                     Icons.art_track_outlined,
-                                    size: 50,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -229,7 +231,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Arts',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -251,8 +253,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 _animation3.value * height,
                                 0),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -262,8 +264,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.sports,
-                                    size: 50,
+                                    Icons.sports_outlined,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -272,7 +274,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Sports',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -286,8 +288,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 _animation4.value * height,
                                 0),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -297,8 +299,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.run_circle,
-                                    size: 50,
+                                    Icons.run_circle_outlined,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -307,7 +309,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Yoga',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
@@ -321,8 +323,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 _animation5.value * height,
                                 0),
                             child: Container(
-                              width: 120,
-                              height: 120,
+                              width: 100,
+                              height: 100,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -332,8 +334,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.language,
-                                    size: 50,
+                                    Icons.language_outlined,
+                                    size: 40,
                                     color: Colors.purple,
                                   ),
                                   SizedBox(
@@ -342,7 +344,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Text(
                                     'Languages',
                                     style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black87),
                                   )
