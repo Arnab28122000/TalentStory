@@ -100,6 +100,7 @@ class _CreateMissionState extends State<CreateMission> {
           textInputAction: TextInputAction.next,
           obscureText: false,
           keyboardType: TextInputType.text,
+          // ignore: missing_return
           validator: (value) {
             if (value.isEmpty) {
               return "required";

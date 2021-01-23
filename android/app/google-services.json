@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "441344360563",
+    "project_id": "talentstory-b3167",
+    "storage_bucket": "talentstory-b3167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441344360563:android:49e29e3df3015fba73ea06",
+        "android_client_info": {
+          "package_name": "com.example.TalentBook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441344360563-v3rhptfbr5thc7r33hft8edbq8hgsh8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.TalentBook",
+            "certificate_hash": "6b9de58c4968a504a30bd08832a6084068dfd100"
+          }
+        },
+        {
+          "client_id": "441344360563-51dsqckge7kfttdf1rap78ctjs5hrd8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4C6d4krwp0q5cFvmpEVzlLY3NhWuO8sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441344360563-51dsqckge7kfttdf1rap78ctjs5hrd8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
