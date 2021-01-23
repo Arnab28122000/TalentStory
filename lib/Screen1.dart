@@ -94,13 +94,15 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
             ),
             appBar: AppBar(
               backgroundColor: Colors.purple,
-              title: Text('TalentStory',
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white)),
+              // title: Text('TalentStory',
+              //     style: TextStyle(
+              //         fontSize: 25,
+              //         fontWeight: FontWeight.bold,
+              //         color: Colors.white)),
+
               //centerTitle: true,
               actions: <Widget>[
+                Image.asset('Assets/logos/logo.png'),
                 IconButton(
                   icon: Icon(Icons.notification_important),
                   color: Colors.black87,
@@ -120,7 +122,10 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               ),
             ),
             floatingActionButton: FloatingActionButton(
-                onPressed: () {}, child: Icon(Icons.notes)),
+                backgroundColor: Colors.black,
+                elevation: 20,
+                onPressed: () {},
+                child: Icon(Icons.notes)),
             body: Container(
                 //margin: EdgeInsets.only(top: 5),
                 width: MediaQuery.of(context).size.width,

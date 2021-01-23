@@ -7,13 +7,14 @@ class splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return SplashScreen(
       navigateAfterSeconds: UIAnim(),
-      seconds: 4,
+      seconds: 8,
       image: Image.asset(
         'Assets/logos/logo.png',
       ),
       loaderColor: Colors.purple,
-      photoSize: 150,
+      photoSize: 220,
       backgroundColor: Colors.black87,
+      //imageBackground: ,
     );
   }
 }

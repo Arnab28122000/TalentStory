@@ -55,6 +55,8 @@ flutter:
    - Assets/logos/google.jpg
    - Assets/Pics/IT.jpg
    - Assets/logos/logo.png
+   - Assets/Pics/Girl.jpg
+   - Assets/Pics/comb.jpg
   
   fonts:
     - family: OpenSans
