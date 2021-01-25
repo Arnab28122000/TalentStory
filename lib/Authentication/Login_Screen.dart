@@ -1,4 +1,4 @@
-import 'package:TalentBook/Screens/OTP_Screen.dart';
+import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
