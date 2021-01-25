@@ -1,21 +1,20 @@
-import 'package:TalentBook/RefScreens/First.dart';
-import 'package:TalentBook/RefScreens/Language.dart';
-import 'package:TalentBook/RefScreens/Second.dart';
-import 'package:TalentBook/Screen1.dart';
-import 'package:TalentBook/Screens/Login_Screen.dart';
-import 'package:TalentBook/Screens/Signup.dart';
-import 'package:TalentBook/Splash.dart';
-import 'package:TalentBook/homescreen.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:talentbook/arts.dart';
+import 'package:talentbook/mission.dart';
+import 'package:talentbook/sports.dart';
+import 'package:talentbook/yoga.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
+  runApp(MyApp());
+}
 
-  runApp(new MaterialApp(
-    home: Sign1(),
-    debugShowCheckedModeBanner: false,
-  ));
-  // runApp(App());
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Sports(),
+    );
+  }
 }
