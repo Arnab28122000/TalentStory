@@ -14,7 +14,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(new MaterialApp(
-    home: Sign1(),
+    home: S5(),
     debugShowCheckedModeBanner: false,
   ));
   // runApp(App());

@@ -6,19 +6,23 @@ class S5 extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Talent Technological Services',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            //  backgroundColor: Colors.purple
-          ),
-        ),
-        // centerTitle: true,
-        backgroundColor: Colors.purple,
-      ),
+      //appBar: AppBar(
+      // title: Text(
+      //   'Talent Technological Services',
+      //   style: TextStyle(
+      //     color: Colors.white,
+      //     fontSize: 25,
+      //     fontWeight: FontWeight.bold,
+      //     //  backgroundColor: Colors.purple
+      //   ),
+      // ),
+      // actions: [
+      //   Image.asset(
+      //     'Assets/Pics/logo1.png',
+      //    // height: 50,
+      //   )
+      //],
+      //
       body: Container(
         width: width,
         height: height,
