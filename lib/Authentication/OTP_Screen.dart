@@ -27,18 +27,36 @@ class _OTPScreenState extends State<OTPScreen> {
     return Scaffold(
       key: _scaffoldkey,
       appBar: AppBar(
-        title: Text('OTP Verification'),
+        title: Text(
+          'OTP Verification',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.purple[300],
+        centerTitle: true,
+        actions: [
+          Image.asset(
+            'Assets/Pics/logo1.png',
+            height: 10,
+            width: 50,
+          )
+        ],
       ),
       body: Column(
         children: [
           Container(
             margin: EdgeInsets.only(top: 40),
             child: Center(
-              child: Text(
-                'Verify +91-${widget.phone}',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 170.0),
+                child: Text(
+                  'Enter OTP sent on +91-${widget.phone}',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
             ),
+          ),
+          SizedBox(
+            height: 150,
           ),
           Padding(
             padding: const EdgeInsets.all(30.0),
