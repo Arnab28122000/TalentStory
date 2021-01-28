@@ -2,6 +2,7 @@ import 'package:TalentBook/Authentication/Login_Screen.dart';
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:TalentBook/Authentication/Signup.dart';
 import 'package:TalentBook/Chatscreen.dart';
+import 'package:TalentBook/RefScreens/Connector.dart';
 import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/RefScreens/Language.dart';
 import 'package:TalentBook/RefScreens/Second.dart';
