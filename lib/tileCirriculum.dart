@@ -15,53 +15,6 @@ class _tileState extends State<tile> {
 
   int count = 1;
 
-  // Widget tileMaker() {
-  //   return Padding(
-  //     padding: const EdgeInsets.all(10.0),
-  //     child: Container(
-  //       height: 250,
-  //       width: MediaQuery.of(context).size.width,
-  //       color: Colors.grey,
-  //       alignment: Alignment.center,
-  //       child: Column(
-  //         children: <Widget>[
-  //           TextField(
-  //             controller: weekController,
-  //             decoration: InputDecoration(
-  //                 hintText: "WEEK Number", icon: Icon(Icons.book)),
-  //             keyboardType: TextInputType.number,
-  //           ),
-  //           TextField(
-  //             controller: chapterNameController,
-  //             decoration: InputDecoration(
-  //                 hintText: "Chapter Name", icon: Icon(Icons.book)),
-  //           ),
-  //           TextField(
-  //             controller: chapterdescriptionController,
-  //             decoration: InputDecoration(
-  //                 hintText: "Description", icon: Icon(Icons.book)),
-  //             keyboardType: TextInputType.multiline,
-  //           ),
-  //           TextField(
-  //             controller: numberVideoController,
-  //             decoration: InputDecoration(
-  //                 hintText: "Number Of Videos", icon: Icon(Icons.video_call)),
-  //             keyboardType: TextInputType.number,
-  //           ),
-  //           TextField(
-  //             controller: hoursController,
-  //             decoration: InputDecoration(
-  //               hintText: "Number of hours required",
-  //               icon: Icon(Icons.timelapse_rounded),
-  //             ),
-  //             keyboardType: TextInputType.number,
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
-
   tileData() {
     Map<String, dynamic> userData = {
       "Week Number": weekController.text,
@@ -86,9 +39,9 @@ class _tileState extends State<tile> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            count++;
+            count = count + 1;
           });
-          count++;
+
           print("count pressed");
         },
         child: Icon(Icons.add),

@@ -41,7 +41,43 @@ class _UpLoadDocumentsState extends State<UpLoadDocuments> {
               onChanged: (val) {
                 //title = val;
               },
+              decoration: InputDecoration(hintText: "Name of Faculty"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextField(
+              onChanged: (val) {
+                //title = val;
+              },
               decoration: InputDecoration(hintText: "Title/Description"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextField(
+              onChanged: (val) {
+                //title = val;
+              },
+              decoration: InputDecoration(hintText: "Assignment Number"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextField(
+              onChanged: (val) {
+                //title = val;
+              },
+              decoration: InputDecoration(hintText: "Due Date"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextField(
+              onChanged: (val) {
+                //title = val;
+              },
+              decoration: InputDecoration(hintText: "Points"),
             ),
           )
         ],

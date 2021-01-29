@@ -30,7 +30,7 @@ class _CodingClassState extends State<CodingClass> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple[700],
+          backgroundColor: const Color(0xFF3f08a6),
           actions: <Widget>[
             Row(
               children: <Widget>[
@@ -77,9 +77,9 @@ class _CodingClassState extends State<CodingClass> {
                 child: Text("Students"),
               ),
               Tab(
-                child: Text("Cirriculum"),
+                child: Text("Curriculum"),
               ),
-              Tab(child: Text("Assigments")),
+              Tab(child: Text("Assignments")),
               //Tab(child: Text("Curriculamm")),
             ],
           ),

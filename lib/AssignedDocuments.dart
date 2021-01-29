@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AssignedDocuments extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _AssignedDocumentsState extends State<AssignedDocuments> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Assigned"),
+        backgroundColor: const Color(0xFF3f08a6),
       ),
       body: ListView.builder(
           itemCount: 8,
@@ -36,42 +38,37 @@ class _AssignedDocumentsState extends State<AssignedDocuments> {
                         Padding(
                           padding:
                               const EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 0.0),
-                          child: Text(
-                            "Posted - Name Of Faculty",
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w600),
-                          ),
+                          child: Text("Posted - Name Of Faculty",
+                              style: GoogleFonts.average(
+                                  textStyle: TextStyle(fontSize: 18))),
                         ),
                         Padding(
                           padding:
                               const EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 0.0),
-                          child: Text(
-                            "Interpersonal Skills Team Presentation",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.w600),
-                          ),
+                          child: Text("Interpersonal Skills Team Presentation",
+                              style: GoogleFonts.average(
+                                  textStyle: TextStyle(fontSize: 18))),
                         ),
                         SizedBox(
                           height: 3,
                         ),
                         Text("Assignment 5",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w600)),
+                            style: GoogleFonts.average(
+                                textStyle: TextStyle(fontSize: 15))),
                         SizedBox(
                           height: 3,
                         ),
                         Row(
                           children: <Widget>[
                             Text("Due -January 3,2020",
-                                style: TextStyle(
-                                    color: Colors.red,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600)),
+                                style: GoogleFonts.average(
+                                    textStyle: TextStyle(
+                                        fontSize: 15, color: Colors.red))),
                             Container(
                                 alignment: Alignment.centerRight,
                                 padding:
-                                    EdgeInsets.fromLTRB(150.0, 0.0, 0.0, 0.0),
-                                child: Text("20 point")),
+                                    EdgeInsets.fromLTRB(120.0, 0.0, 0.0, 0.0),
+                                child: Expanded(child: Text("20 point"))),
                           ],
                         )
                       ],
