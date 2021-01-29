@@ -103,8 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
         elevation: 5.0,
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
-              //  builder: (context) => OTPScreen(_controller.text
-              ));
+              builder: (context) => OTPScreen(_controller.text)));
         },
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(

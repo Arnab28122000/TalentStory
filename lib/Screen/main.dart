@@ -17,7 +17,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(new MaterialApp(
-    home: UIAnim(),
+    home: LoginScreen(),
     debugShowCheckedModeBanner: false,
   ));
   // runApp(App());
