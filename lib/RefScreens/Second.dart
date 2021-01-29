@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class K12S2 extends StatelessWidget {
   @override
@@ -7,23 +8,19 @@ class K12S2 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Talent Technological Services',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            //  backgroundColor: Colors.purple
-          ),
+        backgroundColor: Color(0xff3f08a6),
+        leading: Image.asset(
+          'Assets/Pics/logo1.png',
         ),
-        // centerTitle: true,
-        backgroundColor: Colors.purple,
       ),
+      // centerTitle: true,
+      backgroundColor: Color(0xff3f08a6),
+
       body: Container(
         width: width,
         height: height,
         decoration: BoxDecoration(
-          color: Colors.purple,
+          color: Colors.white,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(0),
         ),
@@ -32,35 +29,35 @@ class K12S2 extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: Text(
-                'Select Class/Grade',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
-              ),
+              child: Text('Select Class/Grade',
+                  style: GoogleFonts.fredokaOne(
+                      color: Colors.black, fontSize: 22)),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 1',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 1',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -68,19 +65,23 @@ class K12S2 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 2',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 2',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -88,19 +89,23 @@ class K12S2 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 3',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 3',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -109,85 +114,101 @@ class K12S2 extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 120,
-                  height: 55,
+                  width: 110,
+                  height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(15)),
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.purple)),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      'Class 4',
-                      style: TextStyle(
-                          color: Colors.purple.shade400,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Class 4',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
                     ),
                   ),
                 ),
                 Container(
-                  width: 120,
-                  height: 55,
+                  width: 110,
+                  height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(15)),
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.purple)),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      'Class 5',
-                      style: TextStyle(
-                          color: Colors.purple.shade400,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Class 5',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
                     ),
                   ),
                 ),
                 Container(
-                  width: 120,
-                  height: 55,
+                  width: 110,
+                  height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(15)),
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.purple)),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      'Class 6',
-                      style: TextStyle(
-                          color: Colors.purple.shade400,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Class 6',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 7',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 7',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -195,19 +216,23 @@ class K12S2 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 8',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 8',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -215,87 +240,23 @@ class K12S2 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 9',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 8',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 9',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 10',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 9',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -311,19 +272,23 @@ class K12S2 extends StatelessWidget {
               children: [
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 11',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 8',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -331,25 +296,111 @@ class K12S2 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Class 12',
-                        style: TextStyle(
-                            color: Colors.purple.shade400,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 9',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                GestureDetector(
+                  child: Container(
+                    width: 110,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 10',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
                   onTap: () {},
                 ),
               ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    child: Container(
+                      width: 110,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.purple)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Text(
+                            'Class 11',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      width: 110,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.purple)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Text(
+                            'Class 12',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 90,
@@ -362,14 +413,15 @@ class K12S2 extends StatelessWidget {
                     width: 120,
                     height: 55,
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
                         'Previous',
                         style: TextStyle(
-                            color: Colors.purple.shade400,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25),
                       ),
@@ -389,7 +441,7 @@ class K12S2 extends StatelessWidget {
                       child: Text(
                         'Next',
                         style: TextStyle(
-                            color: Colors.purple.shade400,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25),
                       ),
