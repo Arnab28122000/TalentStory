@@ -1,6 +1,7 @@
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         Text(
           'Phone',
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.0),
         Column(
@@ -27,14 +29,14 @@ class _LoginScreenState extends State<LoginScreen> {
               child: TextField(
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'OpenSans',
+                  //fontFamily: GoogleFonts.fredokaOne(color: Colors.black)
                 ),
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.only(top: 14.0),
                   prefixIcon: Icon(
-                    Icons.email,
-                    color: Colors.white,
+                    Icons.phone,
+                    color: Colors.purple,
                   ),
                   hintText: 'Enter your Phone Number',
                   prefix: Padding(
@@ -74,11 +76,11 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Row(
         children: <Widget>[
           Theme(
-            data: ThemeData(unselectedWidgetColor: Colors.white),
+            data: ThemeData(unselectedWidgetColor: Colors.purple.shade600),
             child: Checkbox(
               value: _rememberMe,
-              checkColor: Colors.green,
-              activeColor: Colors.white,
+              checkColor: Colors.white,
+              activeColor: Colors.purple,
               onChanged: (value) {
                 setState(() {
                   _rememberMe = value;
@@ -88,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Text(
             'Remember me',
+            style: TextStyle(fontWeight: FontWeight.bold),
             // style: kLabelStyle,
           ),
         ],
@@ -113,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Text(
           'Send Verification Code',
           style: TextStyle(
-            color: Color(0xFF527DAA),
+            color: Colors.black,
             letterSpacing: 1.5,
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
@@ -164,19 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 height: double.infinity,
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF9C27B0),
-                      Color(0xFFAB47BC),
-                      Color(0xFFCE93D8),
-                      Color(0xFFBA68C8),
-                    ],
-                    stops: [0.1, 0.4, 0.7, 0.9],
-                  ),
-                ),
+                decoration: BoxDecoration(color: Colors.white),
               ),
               Container(
                 height: double.infinity,
@@ -189,14 +180,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        'Talent Technological Services',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'OpenSans',
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Image.asset(
+                        'Assets/Pics/logo1.png',
+                        width: 100,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 40.0),
+                        child: Text('Welcome Learner',
+                            style: GoogleFonts.fredokaOne(
+                                color: Colors.black, fontSize: 30)),
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(),
@@ -204,6 +199,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 30.0,
                       ),
                       _buildRememberMeCheckbox(),
+                      SizedBox(
+                        height: 50,
+                      ),
                       _buildLoginBtn(),
                       // _buildSignupBtn(),
                     ],

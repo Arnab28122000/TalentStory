@@ -18,6 +18,7 @@ void main() async {
 
   runApp(new MaterialApp(
     home: LoginScreen(),
+    darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));
   // runApp(App());
