@@ -12,6 +12,7 @@ class K12S2 extends StatelessWidget {
         leading: Image.asset(
           'Assets/Pics/logo1.png',
         ),
+        elevation: 0,
       ),
       // centerTitle: true,
       backgroundColor: Color(0xff3f08a6),
