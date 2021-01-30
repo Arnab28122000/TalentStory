@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class S1 extends StatelessWidget {
   @override
@@ -7,7 +8,8 @@ class S1 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff),
+        backgroundColor: Color(0xff3f08a6),
+        leading: Image.asset('Assets/Pics/logo1.png'),
       ),
       body: Container(
         //margin: EdgeInsets.only(top: 20),
@@ -15,31 +17,31 @@ class S1 extends StatelessWidget {
         height: height,
         decoration: BoxDecoration(
             shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.purple),
+            // borderRadius: BorderRadius.circular(10),
+            color: Colors.white),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Text("Are you A",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold)),
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Are you A",
+                style:
+                    GoogleFonts.fredokaOne(color: Colors.black, fontSize: 28),
+              ),
             ),
             GestureDetector(
               child: Container(
-                height: 75,
+                height: 68,
                 width: 250,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.purple)),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(14.0),
                   child: Text('K12 student/Parent',
-                      style: TextStyle(
-                          fontSize: 25, color: Colors.purple.shade400)),
+                      style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
               onTap: () {},
@@ -49,16 +51,16 @@ class S1 extends StatelessWidget {
             ),
             GestureDetector(
               child: Container(
-                height: 75,
-                width: 250,
+                height: 68,
+                width: 230,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.purple)),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(14.0),
                   child: Text('School Teacher',
-                      style: TextStyle(
-                          fontSize: 25, color: Colors.purple.shade400)),
+                      style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
               onTap: () {},
@@ -69,15 +71,15 @@ class S1 extends StatelessWidget {
             GestureDetector(
               child: Container(
                 height: 80,
-                width: 250,
+                width: 280,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.purple)),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text('Skilled Professional/ Trainer',
-                      style: TextStyle(
-                          fontSize: 25, color: Colors.purple.shade400)),
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text('Skilled Professional/Trainer',
+                      style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
               onTap: () {},
@@ -87,37 +89,38 @@ class S1 extends StatelessWidget {
             ),
             GestureDetector(
               child: Container(
-                height: 80,
+                height: 70,
                 width: 250,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.purple)),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text('Skilled Professional/ Trainer',
-                      style: TextStyle(
-                          fontSize: 25, color: Colors.purple.shade400)),
+                  padding: const EdgeInsets.all(14.0),
+                  child: Text('School Managment',
+                      style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
               onTap: () {},
             ),
             SizedBox(
-              height: 120,
+              height: 60,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 190),
               child: Container(
-                width: 100,
+                width: 95,
                 height: 50,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15)),
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.purple)),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Next',
                     style: TextStyle(
-                        color: Colors.purple.shade400,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 25),
                   ),
