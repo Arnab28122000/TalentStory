@@ -1,7 +1,9 @@
 import 'package:TalentBook/Screen/homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pin_put/pin_put.dart';
+import 'package:sleek_button/sleek_button.dart';
 
 class OTPScreen extends StatefulWidget {
   final String phone;
@@ -31,7 +33,7 @@ class _OTPScreenState extends State<OTPScreen> {
           'OTP Verification',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.purple[300],
+        backgroundColor: Color(0xff3f08a6),
         centerTitle: true,
         actions: [
           Image.asset(
@@ -47,7 +49,7 @@ class _OTPScreenState extends State<OTPScreen> {
             margin: EdgeInsets.only(top: 40),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(right: 170.0),
+                padding: const EdgeInsets.only(right: 100.0),
                 child: Text(
                   'Enter OTP sent on +91-${widget.phone}',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -91,6 +93,19 @@ class _OTPScreenState extends State<OTPScreen> {
                 }
               },
             ),
+          ),
+          SizedBox(
+            height: 80,
+          ),
+          SleekButton(
+            child: Text('Verfiy',
+                style: GoogleFonts.fredokaOne(
+                    color: Color(0xff3f08a6),
+                    fontSize: 23,
+                    fontWeight: FontWeight.bold)),
+            style: SleekButtonStyle.outlined(
+                context: context, borderWidth: 3, color: Colors.purple),
+            onTap: () {},
           )
         ],
       ),

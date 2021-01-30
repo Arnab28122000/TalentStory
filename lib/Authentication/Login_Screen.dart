@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 60.0,
               child: TextField(
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   //fontFamily: GoogleFonts.fredokaOne(color: Colors.black)
                 ),
                 decoration: InputDecoration(
