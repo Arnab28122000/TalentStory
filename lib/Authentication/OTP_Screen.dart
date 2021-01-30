@@ -104,7 +104,9 @@ class _OTPScreenState extends State<OTPScreen> {
                     fontSize: 23,
                     fontWeight: FontWeight.bold)),
             style: SleekButtonStyle.outlined(
-                context: context, borderWidth: 3, color: Colors.purple),
+                context: context,
+                borderWidth: 3,
+                color: Colors.purple.shade200),
             onTap: () {},
           )
         ],
