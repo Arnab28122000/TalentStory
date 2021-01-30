@@ -142,7 +142,7 @@ class manage extends StatelessWidget {
                       hintText: 'Enter your number',
                       border: InputBorder.none,
                       prefixIcon: Icon(
-                        Icons.school,
+                        Icons.phone,
                         color: Color(0xff3f08a6),
                       ),
                     ),
