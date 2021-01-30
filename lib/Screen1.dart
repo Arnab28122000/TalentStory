@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UIAnim extends StatefulWidget {
   @override
@@ -64,25 +65,25 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 BottomNavigationBarItem(
                     icon: Icon(
                       Icons.home,
-                      color: Colors.purple,
+                      color: Color(0xff3f08a6),
                     ),
                     title: Text('Home')),
                 BottomNavigationBarItem(
                     icon: Icon(
                       Icons.mail_outline,
-                      color: Colors.purple,
+                      color: Color(0xff3f08a6),
                     ),
                     title: Text('Message')),
                 BottomNavigationBarItem(
                     icon: Icon(
                       Icons.calendar_today_outlined,
-                      color: Colors.purple,
+                      color: Color(0xff3f08a6),
                     ),
                     title: Text('to-do')),
                 BottomNavigationBarItem(
                     icon: Icon(
                       Icons.people,
-                      color: Colors.purple,
+                      color: Color(0xff3f08a6),
                     ),
                     title: Text('people'))
               ],
@@ -93,7 +94,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               },
             ),
             appBar: AppBar(
-              backgroundColor: Colors.purple,
+              backgroundColor: Color(0xff3f08a6),
               // title: Text('TalentStory',
               //     style: TextStyle(
               //         fontSize: 25,
@@ -102,15 +103,28 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
 
               //centerTitle: true,
               actions: <Widget>[
-                Image.asset('Assets/logos/logo.png'),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: Image.asset(
+                    'Assets/Pics/logo1.png',
+                    width: 50,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0, right: 10),
+                  child: Text(
+                    'Talent Story',
+                    style: GoogleFonts.fredokaOne(color: Colors.white),
+                  ),
+                ),
                 IconButton(
                   icon: Icon(Icons.notification_important),
-                  color: Colors.black87,
+                  color: Colors.black,
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: Icon(Icons.search),
-                  color: Colors.black87,
+                  color: Colors.black,
                   onPressed: () {},
                 ),
               ],
@@ -160,7 +174,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.code_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -170,7 +184,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
@@ -193,7 +207,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.emoji_emotions_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -203,7 +217,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
@@ -228,7 +242,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.art_track_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -238,7 +252,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
@@ -271,7 +285,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.sports_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -281,7 +295,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
@@ -306,7 +320,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.run_circle_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -316,7 +330,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
@@ -341,7 +355,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                   Icon(
                                     Icons.language_outlined,
                                     size: 40,
-                                    color: Colors.purple,
+                                    color: Color(0xff3f08a6),
                                   ),
                                   SizedBox(
                                     height: 10,
@@ -351,7 +365,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                        color: Colors.black),
                                   )
                                 ],
                               ),
