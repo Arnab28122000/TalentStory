@@ -17,7 +17,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(new MaterialApp(
-    home: UIAnim(),
+    home: K12S2(),
     darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

@@ -348,28 +348,85 @@ class K12S2 extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                GestureDetector(
+                  child: Container(
+                    width: 110,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 11',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                GestureDetector(
+                  child: Container(
+                    width: 110,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Text(
+                          'Class 12',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
             Expanded(
+              //flex: 1,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    child: Container(
-                      width: 110,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: Container(
+                        width: 120,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.purple)),
                         child: Padding(
-                          padding: const EdgeInsets.all(3.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Class 11',
+                            'Previous',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 25),
                           ),
                         ),
                       ),
@@ -377,23 +434,23 @@ class K12S2 extends StatelessWidget {
                     onTap: () {},
                   ),
                   GestureDetector(
-                    child: Container(
-                      width: 110,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: Container(
+                        width: 100,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.purple)),
                         child: Padding(
-                          padding: const EdgeInsets.all(3.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Text(
-                            'Class 12',
+                            'Next',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 25),
                           ),
                         ),
                       ),
@@ -402,55 +459,6 @@ class K12S2 extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 90,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Previous',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Next',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-              ],
             ),
           ],
         ),

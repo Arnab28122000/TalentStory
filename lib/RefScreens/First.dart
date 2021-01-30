@@ -7,11 +7,7 @@ class S1 extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Talent Technological Services',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.purple.shade400,
+        backgroundColor: Color(0xff),
       ),
       body: Container(
         //margin: EdgeInsets.only(top: 20),
@@ -61,6 +57,25 @@ class S1 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text('School Teacher',
+                      style: TextStyle(
+                          fontSize: 25, color: Colors.purple.shade400)),
+                ),
+              ),
+              onTap: () {},
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            GestureDetector(
+              child: Container(
+                height: 80,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15)),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text('Skilled Professional/ Trainer',
                       style: TextStyle(
                           fontSize: 25, color: Colors.purple.shade400)),
                 ),

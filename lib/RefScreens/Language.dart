@@ -349,51 +349,25 @@ class S5 extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                    child: Container(
-                      width: 110,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                GestureDetector(
+                  child: Container(
+                    width: 110,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Text(
-                              'Persian',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    onTap: () {},
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      width: 110,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: Padding(
                           padding: const EdgeInsets.all(2.0),
                           child: Text(
-                            'Prakrit',
+                            'Persian',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -402,58 +376,89 @@ class S5 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onTap: () {},
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 70,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  child: Container(
-                    width: 120,
-                    height: 55,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Previous',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
-                      ),
-                    ),
                   ),
                   onTap: () {},
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(15)),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.purple)),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        'Next',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25),
+                      child: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: Text(
+                          'Prakrit',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
                   onTap: () {},
                 ),
               ],
+            ),
+            SizedBox(
+              height: 70,
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    child: Container(
+                      width: 120,
+                      height: 55,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.purple)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(9.0),
+                        child: Text(
+                          'Previous',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        ),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      width: 120,
+                      height: 55,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.purple)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ],
+              ),
             ),
           ],
         ),
