@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sleek_button/sleek_button.dart';
 
 class Sign1 extends StatefulWidget {
   @override
@@ -247,19 +248,16 @@ class _Sign1State extends State<Sign1> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 95.0),
-                            child: GestureDetector(
-                              child: Container(
-                                height: 40,
-                                width: 100,
-                                child: Text(
-                                  'Sign In ',
+                            child: SleekButton(
+                              child: Text('Sign In',
                                   style: GoogleFonts.fredokaOne(
-                                      color: Colors.purple.shade700,
-                                      fontSize: 30),
-                                ),
-                                // decoration: BoxDecoration(
-                                //     border: Border.all(color: Colors.purple),
-                                //     borderRadius: BorderRadius.circular(10)),
+                                      color: Colors.black,
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold)),
+                              style: SleekButtonStyle.outlined(
+                                context: context,
+                                borderWidth: 3,
+                                color: Colors.purple,
                               ),
                               onTap: () {},
                             ),

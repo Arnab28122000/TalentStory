@@ -6,6 +6,8 @@ import 'package:TalentBook/RefScreens/Connector.dart';
 import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/RefScreens/Language.dart';
 import 'package:TalentBook/RefScreens/Second.dart';
+import 'package:TalentBook/Screen/SchoolManagement.dart';
+import 'package:TalentBook/Screen/homescreen.dart';
 import 'package:TalentBook/Screen1.dart';
 import 'package:TalentBook/Splash.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,7 +19,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(new MaterialApp(
-    home: LoginScreen(),
+    home: manage(),
     darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

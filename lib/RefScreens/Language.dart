@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sleek_button/sleek_button.dart';
 
 class S5 extends StatelessWidget {
   @override
@@ -85,8 +86,8 @@ class S5 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
@@ -236,8 +237,8 @@ class S5 extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: Container(
-                    width: 120,
-                    height: 55,
+                    width: 110,
+                    height: 50,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
@@ -412,51 +413,30 @@ class S5 extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GestureDetector(
-                    child: Container(
-                      width: 120,
-                      height: 55,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(9.0),
-                        child: Text(
-                          'Previous',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25),
-                        ),
-                      ),
-                    ),
+                  SleekButton(
+                    child: Text('Previous',
+                        style: GoogleFonts.fredokaOne(
+                            color: Color(0xff3f08a6),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold)),
+                    style: SleekButtonStyle.outlined(
+                        context: context,
+                        borderWidth: 3,
+                        color: Colors.purple.shade200),
                     onTap: () {},
                   ),
-                  GestureDetector(
-                    child: Container(
-                      width: 120,
-                      height: 55,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.purple)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Text(
-                            'Next',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25),
-                          ),
-                        ),
-                      ),
-                    ),
+                  SleekButton(
+                    child: Text('Next',
+                        style: GoogleFonts.fredokaOne(
+                            color: Color(0xff3f08a6),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold)),
+                    style: SleekButtonStyle.outlined(
+                        context: context,
+                        borderWidth: 3,
+                        color: Colors.purple.shade200),
                     onTap: () {},
-                  ),
+                  )
                 ],
               ),
             ),

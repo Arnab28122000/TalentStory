@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sleek_button/sleek_button.dart';
 
 class K12S2 extends StatelessWidget {
   @override
@@ -409,54 +410,36 @@ class K12S2 extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: Container(
-                        width: 120,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.purple)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'Previous',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25),
-                          ),
-                        ),
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15.0),
+                    child: SleekButton(
+                      child: Text('Previous',
+                          style: GoogleFonts.fredokaOne(
+                              color: Colors.black,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold)),
+                      style: SleekButtonStyle.outlined(
+                          context: context,
+                          borderWidth: 3,
+                          color: Colors.purple),
+                      onTap: () {},
                     ),
-                    onTap: () {},
                   ),
-                  GestureDetector(
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 15.0),
-                      child: Container(
-                        width: 100,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.purple)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            'Next',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25),
-                          ),
-                        ),
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 15.0),
+                    child: SleekButton(
+                      child: Text('Next',
+                          style: GoogleFonts.fredokaOne(
+                              color: Colors.black,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold)),
+                      style: SleekButtonStyle.outlined(
+                          context: context,
+                          borderWidth: 3,
+                          color: Colors.purple),
+                      onTap: () {},
                     ),
-                    onTap: () {},
-                  ),
+                  )
                 ],
               ),
             ),
