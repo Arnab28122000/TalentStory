@@ -24,63 +24,65 @@ class _UpLoadDocumentsState extends State<UpLoadDocuments> {
           )
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              color: Colors.black,
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              child: Text("Add Documents"),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                color: Colors.black,
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                child: Text("Add Documents"),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              onChanged: (val) {
-                //title = val;
-              },
-              decoration: InputDecoration(hintText: "Name of Faculty"),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                onChanged: (val) {
+                  //title = val;
+                },
+                decoration: InputDecoration(hintText: "Name of Faculty"),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              onChanged: (val) {
-                //title = val;
-              },
-              decoration: InputDecoration(hintText: "Title/Description"),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                onChanged: (val) {
+                  //title = val;
+                },
+                decoration: InputDecoration(hintText: "Title/Description"),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              onChanged: (val) {
-                //title = val;
-              },
-              decoration: InputDecoration(hintText: "Assignment Number"),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                onChanged: (val) {
+                  //title = val;
+                },
+                decoration: InputDecoration(hintText: "Assignment Number"),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              onChanged: (val) {
-                //title = val;
-              },
-              decoration: InputDecoration(hintText: "Due Date"),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                onChanged: (val) {
+                  //title = val;
+                },
+                decoration: InputDecoration(hintText: "Due Date"),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              onChanged: (val) {
-                //title = val;
-              },
-              decoration: InputDecoration(hintText: "Points"),
-            ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TextField(
+                onChanged: (val) {
+                  //title = val;
+                },
+                decoration: InputDecoration(hintText: "Points"),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
