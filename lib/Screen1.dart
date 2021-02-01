@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class UIAnim extends StatefulWidget {
   @override
@@ -149,7 +148,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 backgroundColor: Colors.purple.shade300,
                 elevation: 15,
                 onPressed: () {},
-                child: Icon(Icons.notes)),
+                child: Icon(Icons.note_add)),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.miniCenterDocked,
             body: Container(

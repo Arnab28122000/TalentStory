@@ -13,7 +13,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
-  TextEditingController _controller = TextEditingController();
+  TextEditingController _controller = new TextEditingController();
+  TextEditingController _controller1 = TextEditingController();
 
   Widget _buildEmailTF() {
     return Column(
@@ -107,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 // maxLength: 6,
                 keyboardType: TextInputType.text,
-                controller: _controller,
+                controller: _controller1,
               ),
             ),
           ],

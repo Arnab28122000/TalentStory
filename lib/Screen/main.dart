@@ -8,6 +8,7 @@ import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/RefScreens/Language.dart';
 import 'package:TalentBook/RefScreens/Second.dart';
 import 'package:TalentBook/Screen/SchoolManagement.dart';
+import 'package:TalentBook/Screen/Teacher.dart';
 import 'package:TalentBook/Screen/homescreen.dart';
 import 'package:TalentBook/Screen1.dart';
 import 'package:TalentBook/Splash.dart';
@@ -22,7 +23,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: LoginScreen(),
+    home: teacher(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));
