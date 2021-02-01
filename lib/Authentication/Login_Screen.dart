@@ -70,6 +70,64 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  Widget _password() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          'Password',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        SizedBox(height: 10.0),
+        Column(
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              height: 60.0,
+              child: TextField(
+                style: TextStyle(
+                  color: Colors.black,
+                  //fontFamily: GoogleFonts.fredokaOne(color: Colors.black)
+                ),
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.only(top: 14.0),
+                  prefixIcon: Icon(
+                    Icons.security,
+                    color: Colors.purple,
+                  ),
+                  hintText: 'Enter your password',
+                  // prefix: Padding(
+                  //   padding: EdgeInsets.all(4),
+                  //   child: Text('+91'),
+                  // ),
+                ),
+                // maxLength: 6,
+                keyboardType: TextInputType.text,
+                controller: _controller,
+              ),
+            ),
+          ],
+        ),
+        // Container(
+        //   margin: EdgeInsets.all(10),
+        //   width: double.infinity,
+        //   child: FlatButton(
+        //     color: Colors.blue,
+        //     onPressed: () {
+        //       Navigator.of(context).push(MaterialPageRoute(
+        //           builder: (context) => OTPScreen(_controller.text)));
+        //     },
+        //     child: Text(
+        //       'Next',
+        //       style: TextStyle(color: Colors.white),
+        //     ),
+        //   ),
+        // ),
+      ],
+    );
+  }
+
   Widget _buildRememberMeCheckbox() {
     return Container(
       height: 20.0,
@@ -114,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         color: Colors.white,
         child: Text(
-          'Send Verification Code',
+          'Log In',
           style: TextStyle(
             color: Colors.black,
             letterSpacing: 1.5,
@@ -182,7 +240,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: <Widget>[
                       Image.asset(
                         'Assets/Pics/logo1.png',
-                        width: 100,
+                        width: 85,
                       ),
                       SizedBox(
                         height: 30,
@@ -195,6 +253,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      _password(),
                       SizedBox(
                         height: 30.0,
                       ),

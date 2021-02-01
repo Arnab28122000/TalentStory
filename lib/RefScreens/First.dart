@@ -8,10 +8,6 @@ class S1 extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff3f08a6),
-        leading: Image.asset('Assets/Pics/logo1.png'),
-      ),
       body: Container(
         //margin: EdgeInsets.only(top: 20),
         width: width,
@@ -26,7 +22,7 @@ class S1 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                "Are you A",
+                "Are you a",
                 style:
                     GoogleFonts.fredokaOne(color: Colors.black, fontSize: 28),
               ),
@@ -34,14 +30,14 @@ class S1 extends StatelessWidget {
             GestureDetector(
               child: Container(
                 height: 68,
-                width: 250,
+                width: 280,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(color: Colors.purple)),
                 child: Padding(
                   padding: const EdgeInsets.all(14.0),
-                  child: Text('K12 student/Parent',
+                  child: Text('K12 Student/Parent',
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
@@ -53,7 +49,7 @@ class S1 extends StatelessWidget {
             GestureDetector(
               child: Container(
                 height: 68,
-                width: 230,
+                width: 280,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -90,15 +86,15 @@ class S1 extends StatelessWidget {
             ),
             GestureDetector(
               child: Container(
-                height: 70,
-                width: 250,
+                height: 65,
+                width: 280,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(color: Colors.purple)),
                 child: Padding(
-                  padding: const EdgeInsets.all(14.0),
-                  child: Text('School Managment',
+                  padding: const EdgeInsets.all(9.0),
+                  child: Text('School Management',
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),

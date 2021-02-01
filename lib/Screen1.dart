@@ -60,30 +60,51 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
       builder: (BuildContext context, Widget child) {
         return Scaffold(
             bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              selectedItemColor: Color(0xff3f08a6),
+              selectedIconTheme: IconThemeData(color: Color(0xff3f08a6)),
               currentIndex: _currentindex,
               items: [
                 BottomNavigationBarItem(
-                    icon: Icon(
+                    activeIcon: Icon(
                       Icons.home,
                       color: Color(0xff3f08a6),
                     ),
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.grey.shade500,
+                      size: 30,
+                    ),
                     title: Text('Home')),
                 BottomNavigationBarItem(
-                    icon: Icon(
+                    activeIcon: Icon(
                       Icons.mail_outline,
                       color: Color(0xff3f08a6),
                     ),
+                    icon: Icon(
+                      Icons.mail_outline,
+                      color: Colors.grey.shade500,
+                      size: 30,
+                    ),
                     title: Text('Message')),
                 BottomNavigationBarItem(
+                    activeIcon: Icon(
+                      Icons.calculate_outlined,
+                      color: Color(0xff3f08a6),
+                    ),
                     icon: Icon(
                       Icons.calendar_today_outlined,
-                      color: Color(0xff3f08a6),
+                      color: Colors.grey.shade500,
                     ),
                     title: Text('to-do')),
                 BottomNavigationBarItem(
-                    icon: Icon(
+                    activeIcon: Icon(
                       Icons.people,
                       color: Color(0xff3f08a6),
+                    ),
+                    icon: Icon(
+                      Icons.people,
+                      color: Colors.grey.shade500,
                     ),
                     title: Text('people'))
               ],
@@ -94,6 +115,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               },
             ),
             appBar: AppBar(
+              title: Text('Talent Story',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               backgroundColor: Color(0xff3f08a6),
               // title: Text('TalentStory',
               //     style: TextStyle(
@@ -103,20 +126,6 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
 
               //centerTitle: true,
               actions: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 20.0),
-                  child: Image.asset(
-                    'Assets/Pics/logo1.png',
-                    width: 50,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15.0, right: 10),
-                  child: Text(
-                    'Talent Story',
-                    style: GoogleFonts.fredokaOne(color: Colors.white),
-                  ),
-                ),
                 IconButton(
                   icon: Icon(Icons.notification_important),
                   color: Colors.black,
@@ -128,7 +137,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                   onPressed: () {},
                 ),
               ],
-              elevation: 0,
+              elevation: 20,
               leading: IconButton(
                 icon: Icon(Icons.menu),
                 color: Colors.black87,
@@ -136,10 +145,13 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               ),
             ),
             floatingActionButton: FloatingActionButton(
-                backgroundColor: Colors.black,
-                elevation: 20,
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.purple.shade300,
+                elevation: 15,
                 onPressed: () {},
                 child: Icon(Icons.notes)),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.miniCenterDocked,
             body: Container(
                 //margin: EdgeInsets.only(top: 5),
                 width: MediaQuery.of(context).size.width,
@@ -148,7 +160,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 decoration: BoxDecoration(color: Colors.white),
                 // borderRadius: BorderRadius.circular(30)),
                 child: Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.only(
+                      right: 18.0, top: 18.0, bottom: 18.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -384,12 +397,17 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                       SizedBox(
                         height: 20,
                       ),
-                      Image.asset('Assets/Pics/IT.jpg'),
+                      Expanded(child: Image.asset('Assets/Pics/IT.jpg')),
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                          "In literary theory, a text is any object that can be, whether this object is a work of literature, a street sign, an arrangement of buildings on a city block, or styles of clothing. It is a coherent set of signs that transmits some kind of informative message."),
+                      SingleChildScrollView(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                              "In literary theory, a text is any object that can be, whether this object is a work of literature, a street sign, an arrangement of buildings on a city block, or styles of clothing. It is a coherent set of signs that transmits some kind of informative message."),
+                        ),
+                      ),
                     ],
                   ),
                 )));
