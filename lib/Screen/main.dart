@@ -1,6 +1,7 @@
 import 'package:TalentBook/Authentication/Login_Screen.dart';
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:TalentBook/Authentication/Signup.dart';
+import 'package:TalentBook/Authentication/forgotpassword.dart';
 import 'package:TalentBook/Chatscreen.dart';
 import 'package:TalentBook/RefScreens/Connector.dart';
 import 'package:TalentBook/RefScreens/First.dart';
@@ -21,7 +22,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: manage(),
+    home: LoginScreen(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

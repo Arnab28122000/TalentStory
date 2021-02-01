@@ -30,7 +30,7 @@ class _manageState extends State<manage> {
               child: Text('School Management',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 30,
+                      fontSize: 28,
                       fontWeight: FontWeight.bold)),
             ),
             Expanded(

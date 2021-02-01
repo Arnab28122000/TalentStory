@@ -1,4 +1,7 @@
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
+import 'package:TalentBook/Authentication/Signup.dart';
+import 'package:TalentBook/Authentication/forgotpassword.dart';
+import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -161,10 +164,10 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: EdgeInsets.symmetric(vertical: 25.0),
       width: double.infinity,
       child: RaisedButton(
-        elevation: 25.0,
+        elevation: 15.0,
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => OTPScreen(_controller.text)));
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => UIAnim()));
         },
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
@@ -233,7 +236,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   physics: AlwaysScrollableScrollPhysics(),
                   padding: EdgeInsets.symmetric(
                     horizontal: 40.0,
-                    vertical: 120.0,
+                    vertical: 50.0,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -258,13 +261,47 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       _password(),
                       SizedBox(
-                        height: 30.0,
+                        height: 20.0,
+                      ),
+                      InkWell(
+                        child: Text('Forgot Password?',
+                            style: GoogleFonts.fredokaOne(color: Colors.black)),
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => forgot()));
+                        },
+                      ),
+                      SizedBox(
+                        height: 20,
                       ),
                       _buildRememberMeCheckbox(),
                       SizedBox(
-                        height: 50,
+                        height: 10,
                       ),
                       _buildLoginBtn(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text('Dont have an account?'),
+                          InkWell(
+                            child: Text(
+                              'Sign In',
+                              style: GoogleFonts.fredokaOne(
+                                  color: Colors.black,
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Sign1()));
+                            },
+                          ),
+                        ],
+                      )
+
                       // _buildSignupBtn(),
                     ],
                   ),

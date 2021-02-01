@@ -35,13 +35,6 @@ class _OTPScreenState extends State<OTPScreen> {
         ),
         backgroundColor: Color(0xff3f08a6),
         centerTitle: true,
-        actions: [
-          Image.asset(
-            'Assets/Pics/logo1.png',
-            height: 10,
-            width: 50,
-          )
-        ],
       ),
       body: Column(
         children: [
