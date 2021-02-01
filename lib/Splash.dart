@@ -10,6 +10,7 @@ class splash extends StatelessWidget {
       seconds: 8,
       image: Image.asset(
         'Assets/logos/logo.png',
+        width: 200,
       ),
       loaderColor: Colors.purple,
       photoSize: 220,

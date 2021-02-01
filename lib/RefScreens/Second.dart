@@ -25,7 +25,7 @@ class K12S2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 50.0),
                 child: Text('Select Class/Grade',
                     style: GoogleFonts.fredokaOne(
                         color: Colors.black, fontSize: 22)),
