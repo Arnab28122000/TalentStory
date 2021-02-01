@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleek_button/sleek_button.dart';
 
-class manage extends StatelessWidget {
+// ignore: camel_case_types
+class manage extends StatefulWidget {
+  @override
+  _manageState createState() => _manageState();
+}
+
+// ignore: camel_case_types
+class _manageState extends State<manage> {
   TextEditingController _controller = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -13,7 +13,7 @@ class splash extends StatelessWidget {
       ),
       loaderColor: Colors.purple,
       photoSize: 220,
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.white,
       //imageBackground: ,
     );
   }
