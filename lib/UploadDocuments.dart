@@ -1,4 +1,8 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
+// import 'package:file_picker/file_picker.dart';
+import 'package:flutter/services.dart';
 
 class UpLoadDocuments extends StatefulWidget {
   @override
@@ -28,14 +32,11 @@ class _UpLoadDocumentsState extends State<UpLoadDocuments> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                color: Colors.black,
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                child: Text("Add Documents"),
-              ),
-            ),
+                padding: const EdgeInsets.all(20.0),
+                child: RaisedButton(
+                  onPressed: () async {},
+                  child: Text("Get Documents"),
+                )),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextField(
