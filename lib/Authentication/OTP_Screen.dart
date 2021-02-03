@@ -19,12 +19,28 @@ class _OTPScreenState extends State<OTPScreen> {
   final FocusNode _pinPutFocusNode = FocusNode();
   final BoxDecoration pinPutDecoration = BoxDecoration(
     color: const Color.fromRGBO(43, 46, 66, 1),
-    borderRadius: BorderRadius.circular(10.0),
-    border: Border.all(
-      color: const Color.fromRGBO(126, 203, 224, 1),
-    ),
+    borderRadius: BorderRadius.circular(9.5),
+    // border: Border.all(
+    //   color: const Color.fromRGBO(126, 203, 224, 1),
+    // ),
   );
   @override
+  Widget _buildLoginBtn() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Verify',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldkey,
@@ -45,7 +61,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 padding: const EdgeInsets.only(right: 100.0),
                 child: Text(
                   'Enter OTP sent on +91-${widget.phone}',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: GoogleFonts.roboto(fontSize: 20),
                 ),
               ),
             ),
@@ -90,18 +106,7 @@ class _OTPScreenState extends State<OTPScreen> {
           SizedBox(
             height: 80,
           ),
-          SleekButton(
-            child: Text('Verfiy',
-                style: GoogleFonts.fredokaOne(
-                    color: Color(0xff3f08a6),
-                    fontSize: 23,
-                    fontWeight: FontWeight.bold)),
-            style: SleekButtonStyle.outlined(
-                context: context,
-                borderWidth: 3,
-                color: Colors.purple.shade200),
-            onTap: () {},
-          )
+          _buildLoginBtn()
         ],
       ),
     );

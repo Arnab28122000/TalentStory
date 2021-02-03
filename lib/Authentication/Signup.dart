@@ -10,6 +10,7 @@ class Sign1 extends StatefulWidget {
 class _Sign1State extends State<Sign1> {
   bool _rememberMe = false;
   bool _rememberMe1 = false;
+  bool _rememberMe2 = false;
   TextEditingController _controller = TextEditingController();
   TextEditingController _controller1 = TextEditingController();
   TextEditingController _controller2 = TextEditingController();
@@ -17,10 +18,27 @@ class _Sign1State extends State<Sign1> {
   TextEditingController _controller4 = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    Widget _buildLoginBtn() {
+      return Container(
+        // padding: EdgeInsets.(vertical: 25.0),
+        width: 140,
+        height: 40,
+        child: Center(
+            child: Text(
+          'Next',
+          style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+        )),
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.purple),
+            borderRadius: BorderRadius.circular(9.5)),
+      );
+    }
+
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Container(
           width: width,
           height: height,
@@ -35,7 +53,7 @@ class _Sign1State extends State<Sign1> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 50.0),
+                padding: const EdgeInsets.only(top: 40.0),
                 child: Image.asset(
                   'Assets/Pics/logo1.png',
                   width: 80,
@@ -43,14 +61,13 @@ class _Sign1State extends State<Sign1> {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 200.0, top: 20),
+              Center(
                 child: Text(
-                  'Signup',
-                  style: GoogleFonts.fredokaOne(
-                      color: Colors.black87, fontSize: 35),
+                  'signup',
+                  style:
+                      GoogleFonts.roboto(color: Colors.black87, fontSize: 30),
                 ),
               ),
               SizedBox(
@@ -61,10 +78,10 @@ class _Sign1State extends State<Sign1> {
                   //mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 2.0),
+                          padding: const EdgeInsets.only(left: 35.0, right: 25),
                           child: Container(
                             width: 150,
                             height: 50,
@@ -112,10 +129,10 @@ class _Sign1State extends State<Sign1> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 40.0, right: 40),
+                      padding: const EdgeInsets.only(top: 30.0, right: 40),
                       child: Container(
                         width: 300,
-                        height: 55,
+                        height: 50,
                         child: TextField(
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
@@ -135,50 +152,79 @@ class _Sign1State extends State<Sign1> {
                         //,
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 200,
-                          height: 70,
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 50.0),
-                                child: Text('Male',
-                                    style: GoogleFonts.fredokaOne(
-                                        color: Colors.black45, fontSize: 25)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              width: 200,
+                              height: 70,
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 50.0),
+                                    child: Text('Male',
+                                        style: GoogleFonts.roboto(
+                                            color: Colors.black45,
+                                            fontSize: 22)),
+                                  ),
+                                  Checkbox(
+                                    value: _rememberMe,
+                                    activeColor: Colors.purple,
+                                    checkColor: Colors.white,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        _rememberMe = value;
+                                      });
+                                    },
+                                  )
+                                ],
                               ),
-                              Checkbox(
-                                value: _rememberMe,
-                                activeColor: Colors.purple,
-                                checkColor: Colors.white,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _rememberMe = value;
-                                  });
-                                },
-                              )
-                            ],
-                          ),
-                          // decoration:
-                          //     BoxDecoration(border: Border.all(color: Colors.purple)),
+                              // decoration:
+                              //     BoxDecoration(border: Border.all(color: Colors.purple)),
+                            ),
+                            Container(
+                              width: 200,
+                              height: 30,
+                              child: Row(
+                                children: [
+                                  Text('Female',
+                                      style: GoogleFonts.roboto(
+                                          color: Colors.black45, fontSize: 22)),
+                                  Checkbox(
+                                    value: _rememberMe1,
+                                    activeColor: Colors.purple,
+                                    checkColor: Colors.white,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        _rememberMe1 = value;
+                                      });
+                                    },
+                                  )
+                                ],
+                              ),
+                              // decoration:
+                              //     BoxDecoration(border: Border.all(color: Colors.purple)),
+                            )
+                          ],
                         ),
                         Container(
                           width: 200,
-                          height: 70,
+                          height: 30,
                           child: Row(
                             children: [
-                              Text('Female',
-                                  style: GoogleFonts.fredokaOne(
-                                      color: Colors.black45, fontSize: 25)),
+                              Text('Not Specified',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.black45, fontSize: 22)),
                               Checkbox(
-                                value: _rememberMe1,
+                                value: _rememberMe2,
                                 activeColor: Colors.purple,
                                 checkColor: Colors.white,
                                 onChanged: (value) {
                                   setState(() {
-                                    _rememberMe1 = value;
+                                    _rememberMe2 = value;
                                   });
                                 },
                               )
@@ -189,13 +235,15 @@ class _Sign1State extends State<Sign1> {
                         )
                       ],
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Expanded(
                       child: Column(
                         //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Padding(
-                            padding:
-                                const EdgeInsets.only(top: 10.0, right: 40),
+                            padding: const EdgeInsets.only(right: 40),
                             child: Container(
                               width: 300,
                               height: 55,
@@ -244,24 +292,12 @@ class _Sign1State extends State<Sign1> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 30,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 95.0),
-                            child: SleekButton(
-                              child: Text('Sign In',
-                                  style: GoogleFonts.fredokaOne(
-                                      color: Colors.black,
-                                      fontSize: 23,
-                                      fontWeight: FontWeight.bold)),
-                              style: SleekButtonStyle.outlined(
-                                context: context,
-                                borderWidth: 3,
-                                color: Colors.purple,
-                              ),
-                              onTap: () {},
-                            ),
-                          )
+                            padding: const EdgeInsets.only(left: 0.0),
+                            child: _buildLoginBtn(),
+                          ),
                         ],
                       ),
                     )

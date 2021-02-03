@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         Text(
           'Phone',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 10.0),
         Column(
@@ -37,16 +37,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  contentPadding: EdgeInsets.only(top: 14.0),
+                  contentPadding: EdgeInsets.only(top: 12.0, right: 20),
                   prefixIcon: Icon(
                     Icons.phone,
                     color: Colors.purple,
                   ),
                   hintText: 'Enter your Phone Number',
-                  prefix: Padding(
-                    padding: EdgeInsets.all(4),
-                    child: Text('+91'),
-                  ),
+                  // prefix: Padding(
+                  //   padding: EdgeInsets.all(0),
+                  //   child: Text('+91'),
+                  // ),
                 ),
                 maxLength: 10,
                 keyboardType: TextInputType.number,
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         Text(
           'Password',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 10.0),
         Column(
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Text(
             'Remember me',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: GoogleFonts.roboto(),
             // style: kLabelStyle,
           ),
         ],
@@ -162,30 +162,17 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildLoginBtn() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 25.0),
-      width: double.infinity,
-      child: RaisedButton(
-        elevation: 15.0,
-        onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => UIAnim()));
-        },
-        padding: EdgeInsets.all(15.0),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-        color: Colors.white,
-        child: Text(
-          'Log In',
-          style: TextStyle(
-            color: Colors.black,
-            letterSpacing: 1.5,
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'OpenSans',
-          ),
-        ),
-      ),
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 190,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Log In',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
     );
   }
 
@@ -250,10 +237,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 30,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 40.0),
+                        padding: const EdgeInsets.only(
+                            right: 40.0, top: 8, bottom: 8),
                         child: Text('Welcome Learner',
-                            style: GoogleFonts.fredokaOne(
-                                color: Colors.black, fontSize: 30)),
+                            style: GoogleFonts.roboto(
+                                color: Colors.black, fontSize: 28)),
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(),
@@ -264,36 +252,51 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 20.0,
                       ),
-                      InkWell(
-                        child: Text('Forgot Password?',
-                            style: GoogleFonts.fredokaOne(color: Colors.black)),
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => forgot()));
-                        },
+                      Padding(
+                        padding: const EdgeInsets.only(right: 120.0),
+                        child: InkWell(
+                          child: Text(
+                            'Forgot Password?',
+                            style: GoogleFonts.roboto(
+                                color: Colors.black,
+                                decoration: TextDecoration.underline),
+                          ),
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => forgot()));
+                          },
+                        ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       _buildRememberMeCheckbox(),
                       SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       _buildLoginBtn(),
                       SizedBox(
-                        height: 10,
+                        height: 30,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Dont have an account?'),
+                          Center(
+                              child: Padding(
+                            padding: const EdgeInsets.only(left: 50.0),
+                            child: Text('Dont have an account?'),
+                          )),
                           InkWell(
-                            child: Text(
-                              'Sign In',
-                              style: GoogleFonts.fredokaOne(
-                                  color: Colors.black,
-                                  fontSize: 19,
-                                  fontWeight: FontWeight.bold),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'Sign In',
+                                style: GoogleFonts.roboto(
+                                    color: Colors.black,
+                                    fontSize: 19,
+                                    decoration: TextDecoration.underline),
+                                // fontWeight: FontWeight.bold),
+                              ),
                             ),
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
