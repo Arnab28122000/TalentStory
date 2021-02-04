@@ -28,12 +28,12 @@ class _teacherState extends State<teacher> {
   Widget _buildLoginBtn() {
     return Container(
       // padding: EdgeInsets.(vertical: 25.0),
-      width: 120,
+      width: 90,
       height: 40,
       child: Center(
           child: Text(
         'Previous',
-        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+        style: GoogleFonts.roboto(fontSize: 17, fontWeight: FontWeight.w500),
       )),
       decoration: BoxDecoration(
           border: Border.all(color: Colors.purple),
@@ -44,12 +44,12 @@ class _teacherState extends State<teacher> {
   Widget _buildLoginBtn1() {
     return Container(
       // padding: EdgeInsets.(vertical: 25.0),
-      width: 120,
+      width: 80,
       height: 40,
       child: Center(
           child: Text(
         'Save',
-        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+        style: GoogleFonts.roboto(fontSize: 17, fontWeight: FontWeight.w500),
       )),
       decoration: BoxDecoration(
           border: Border.all(color: Colors.purple),
@@ -73,19 +73,19 @@ class _teacherState extends State<teacher> {
             ),
             Center(
               child: Text('Select your category',
-                  style: GoogleFonts.roboto(fontSize: 28)),
+                  style: GoogleFonts.roboto(fontSize: 25)),
             ),
             SizedBox(
-              height: 50,
+              height: 80,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 80.0),
+                  padding: const EdgeInsets.only(left: 0, right: 95),
                   child: Text('Select your grade',
                       style: GoogleFonts.roboto(
-                          color: Colors.black, fontSize: 25)),
+                          color: Colors.black, fontSize: 17)),
                 ),
                 DropdownButton(
                   hint: Text('Add your grade'),
@@ -110,39 +110,29 @@ class _teacherState extends State<teacher> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Select your\nsubject',
-                    style:
-                        GoogleFonts.roboto(color: Colors.black, fontSize: 25)),
-                DropdownButton(
-                  hint: Text('Subject'),
-                  items: listitem1.map((valueItem1) {
-                    return DropdownMenuItem(
-                      value: valueItem1,
-                      child: Text(valueItem1),
-                    );
-                  }).toList(),
-                  value: valuechoose1,
-                  onChanged: (value) {
-                    setState(() {
-                      valuechoose1 = value;
-                    });
-                  },
-                )
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Qualification',
-                    style:
-                        GoogleFonts.roboto(color: Colors.black, fontSize: 25)),
-                DropdownButton(
-                  items: [],
-                  hint: Text('Education'),
-                  onChanged: (value) {},
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0, right: 50),
+                  child: Text('Select your\nsubject',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 17)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 25.0),
+                  child: DropdownButton(
+                    hint: Text('Subject'),
+                    items: listitem1.map((valueItem1) {
+                      return DropdownMenuItem(
+                        value: valueItem1,
+                        child: Text(valueItem1),
+                      );
+                    }).toList(),
+                    value: valuechoose1,
+                    onChanged: (value) {
+                      setState(() {
+                        valuechoose1 = value;
+                      });
+                    },
+                  ),
                 )
               ],
             ),
@@ -153,20 +143,45 @@ class _teacherState extends State<teacher> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 15.0),
-                  child: Text('Experience',
+                  padding: const EdgeInsets.only(left: 15.0, right: 50),
+                  child: Text('Qualification',
                       style: GoogleFonts.roboto(
-                          color: Colors.black, fontSize: 25)),
+                          color: Colors.black, fontSize: 17)),
                 ),
-                DropdownButton(
-                  hint: Text('Years'),
-                  items: [],
-                  onChanged: (value) {},
+                Padding(
+                  padding: const EdgeInsets.only(right: 50.0),
+                  child: DropdownButton(
+                    items: [],
+                    hint: Text('Education'),
+                    onChanged: (value) {},
+                  ),
                 )
               ],
             ),
             SizedBox(
               height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 50.0, left: 15),
+                  child: Text('Experience',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 17)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 75.0),
+                  child: DropdownButton(
+                    hint: Text('Years'),
+                    items: [],
+                    onChanged: (value) {},
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 90,
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 15.0),
