@@ -3,6 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sleek_button/sleek_button.dart';
 
 class S1 extends StatelessWidget {
+  Widget _buildLoginBtn() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 50,
+      child: Center(
+          child: Text(
+        'Next',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -23,8 +39,7 @@ class S1 extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 "Are you a",
-                style:
-                    GoogleFonts.fredokaOne(color: Colors.black, fontSize: 28),
+                style: GoogleFonts.roboto(color: Colors.black, fontSize: 28),
               ),
             ),
             GestureDetector(
@@ -34,7 +49,14 @@ class S1 extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Colors.purple)),
+                    border: Border.all(color: Colors.purple),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 1.0), //(x,y)
+                        blurRadius: 6.0,
+                      )
+                    ]),
                 child: Padding(
                   padding: const EdgeInsets.all(14.0),
                   child: Text('K12 Student/Parent',
@@ -53,11 +75,20 @@ class S1 extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Colors.purple)),
+                    border: Border.all(color: Colors.purple),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 1.0), //(x,y)
+                        blurRadius: 6.0,
+                      )
+                    ]),
                 child: Padding(
                   padding: const EdgeInsets.all(14.0),
-                  child: Text('School Teacher',
-                      style: TextStyle(fontSize: 25, color: Colors.black)),
+                  child: Center(
+                    child: Text('School Teacher',
+                        style: TextStyle(fontSize: 25, color: Colors.black)),
+                  ),
                 ),
               ),
               onTap: () {},
@@ -72,7 +103,14 @@ class S1 extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Colors.purple)),
+                    border: Border.all(color: Colors.purple),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 1.0), //(x,y)
+                        blurRadius: 6.0,
+                      )
+                    ]),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Text('Skilled Professional/Trainer',
@@ -91,9 +129,15 @@ class S1 extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Colors.purple)),
-                child: Padding(
-                  padding: const EdgeInsets.all(9.0),
+                    border: Border.all(color: Colors.purple),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 1.0), //(x,y)
+                        blurRadius: 6.0,
+                      )
+                    ]),
+                child: Center(
                   child: Text('School Management',
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
@@ -103,16 +147,7 @@ class S1 extends StatelessWidget {
             SizedBox(
               height: 60,
             ),
-            SleekButton(
-              child: Text('Next',
-                  style: GoogleFonts.fredokaOne(
-                      color: Colors.black,
-                      fontSize: 23,
-                      fontWeight: FontWeight.bold)),
-              style: SleekButtonStyle.outlined(
-                  context: context, borderWidth: 3, color: Colors.purple),
-              onTap: () {},
-            )
+            _buildLoginBtn(),
           ],
         ),
       ),

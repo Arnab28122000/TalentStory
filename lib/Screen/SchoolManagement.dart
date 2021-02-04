@@ -11,6 +11,37 @@ class manage extends StatefulWidget {
 // ignore: camel_case_types
 class _manageState extends State<manage> {
   TextEditingController _controller = new TextEditingController();
+  Widget _buildLoginBtn() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Previous',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
+  Widget _buildLoginBtn1() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Save',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +49,7 @@ class _manageState extends State<manage> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          margin: EdgeInsets.all(5),
+          margin: EdgeInsets.all(2),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(border: Border.all(color: Colors.purple)),
@@ -28,21 +59,21 @@ class _manageState extends State<manage> {
             ),
             Center(
               child: Text('School Management',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold)),
+                  style: GoogleFonts.roboto(fontSize: 27)),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('School\nName',
-                      style: GoogleFonts.fredokaOne(
-                          color: Colors.black, fontSize: 25)),
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 22)),
                   Container(
-                    width: 300,
-                    height: 55,
+                    width: 320,
+                    height: 50,
                     child: TextField(
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
@@ -68,12 +99,9 @@ class _manageState extends State<manage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 140.0),
-                    child: Text('State',
-                        style: GoogleFonts.fredokaOne(
-                            color: Colors.black, fontSize: 25)),
-                  ),
+                  Text('State',
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 22)),
                   DropdownButton(
                     items: [],
                     hint: Text('Select your State'),
@@ -87,10 +115,10 @@ class _manageState extends State<manage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 190.0),
+                    padding: const EdgeInsets.only(right: 90.0),
                     child: Text('City',
-                        style: GoogleFonts.fredokaOne(
-                            color: Colors.black, fontSize: 25)),
+                        style: GoogleFonts.roboto(
+                            color: Colors.black, fontSize: 22)),
                   ),
                   DropdownButton(
                     items: [],
@@ -107,12 +135,12 @@ class _manageState extends State<manage> {
                   Padding(
                     padding: const EdgeInsets.only(right: 15.0),
                     child: Text('Area',
-                        style: GoogleFonts.fredokaOne(
-                            color: Colors.black, fontSize: 25)),
+                        style: GoogleFonts.roboto(
+                            color: Colors.black, fontSize: 22)),
                   ),
                   Container(
-                    width: 300,
-                    height: 55,
+                    width: 320,
+                    height: 50,
                     child: TextField(
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
@@ -139,11 +167,11 @@ class _manageState extends State<manage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('Contact\nNumber',
-                      style: GoogleFonts.fredokaOne(
-                          color: Colors.black, fontSize: 25)),
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 22)),
                   Container(
-                    width: 290,
-                    height: 55,
+                    width: 320,
+                    height: 50,
                     child: TextField(
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
@@ -170,11 +198,11 @@ class _manageState extends State<manage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('Official\n Email',
-                      style: GoogleFonts.fredokaOne(
-                          color: Colors.black, fontSize: 25)),
+                      style: GoogleFonts.roboto(
+                          color: Colors.black, fontSize: 22)),
                   Container(
-                    width: 300,
-                    height: 55,
+                    width: 320,
+                    height: 50,
                     child: TextField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
@@ -203,32 +231,7 @@ class _manageState extends State<manage> {
               padding: const EdgeInsets.only(bottom: 15.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SleekButton(
-                      child: Text('Previous',
-                          style: GoogleFonts.fredokaOne(
-                              color: Colors.black,
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple),
-                      onTap: () {},
-                    ),
-                    SleekButton(
-                      child: Text('Save',
-                          style: GoogleFonts.fredokaOne(
-                              color: Colors.black,
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple),
-                      onTap: () {},
-                    )
-                  ]),
+                  children: [_buildLoginBtn(), _buildLoginBtn1()]),
             ),
           ]),
         ),

@@ -26,6 +26,37 @@ List listitem1 = [
 // ignore: camel_case_types
 class _teacherState extends State<teacher> {
   TextEditingController _controller = new TextEditingController();
+  Widget _buildLoginBtn() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Previous',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
+  Widget _buildLoginBtn1() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 120,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Save',
+        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,88 +64,91 @@ class _teacherState extends State<teacher> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          margin: EdgeInsets.all(5),
+          margin: EdgeInsets.all(2),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(border: Border.all(color: Colors.purple)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             Center(
               child: Text('Select your category',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold)),
+                  style: GoogleFonts.roboto(fontSize: 28)),
             ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 50.0),
-                    child: Text('Select your grade',
-                        style: GoogleFonts.fredokaOne(
-                            color: Colors.black, fontSize: 25)),
-                  ),
-                  DropdownButton(
-                    hint: Text('Add your grade'),
-                    items: listitem.map((valueItem) {
-                      return DropdownMenuItem(
-                        value: valueItem,
-                        child: Text(valueItem),
-                      );
-                    }).toList(),
-                    value: valuechoose,
-                    onChanged: (value) {
-                      setState(() {
-                        valuechoose = value;
-                      });
-                    },
-                  )
-                ],
-              ),
+            SizedBox(
+              height: 50,
             ),
-            SingleChildScrollView(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Select your\nsubject',
-                      style: GoogleFonts.fredokaOne(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 80.0),
+                  child: Text('Select your grade',
+                      style: GoogleFonts.roboto(
                           color: Colors.black, fontSize: 25)),
-                  DropdownButton(
-                    hint: Text('Subject'),
-                    items: listitem1.map((valueItem1) {
-                      return DropdownMenuItem(
-                        value: valueItem1,
-                        child: Text(valueItem1),
-                      );
-                    }).toList(),
-                    value: valuechoose1,
-                    onChanged: (value) {
-                      setState(() {
-                        valuechoose1 = value;
-                      });
-                    },
-                  )
-                ],
-              ),
+                ),
+                DropdownButton(
+                  hint: Text('Add your grade'),
+                  items: listitem.map((valueItem) {
+                    return DropdownMenuItem(
+                      value: valueItem,
+                      child: Text(valueItem),
+                    );
+                  }).toList(),
+                  value: valuechoose,
+                  onChanged: (value) {
+                    setState(() {
+                      valuechoose = value;
+                    });
+                  },
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Qualification',
-                      style: GoogleFonts.fredokaOne(
-                          color: Colors.black, fontSize: 25)),
-                  DropdownButton(
-                    items: [],
-                    hint: Text('Education'),
-                    onChanged: (value) {},
-                  )
-                ],
-              ),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Select your\nsubject',
+                    style:
+                        GoogleFonts.roboto(color: Colors.black, fontSize: 25)),
+                DropdownButton(
+                  hint: Text('Subject'),
+                  items: listitem1.map((valueItem1) {
+                    return DropdownMenuItem(
+                      value: valueItem1,
+                      child: Text(valueItem1),
+                    );
+                  }).toList(),
+                  value: valuechoose1,
+                  onChanged: (value) {
+                    setState(() {
+                      valuechoose1 = value;
+                    });
+                  },
+                )
+              ],
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Qualification',
+                    style:
+                        GoogleFonts.roboto(color: Colors.black, fontSize: 25)),
+                DropdownButton(
+                  items: [],
+                  hint: Text('Education'),
+                  onChanged: (value) {},
+                )
+              ],
+            ),
+            SizedBox(
+              height: 40,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,7 +156,7 @@ class _teacherState extends State<teacher> {
                 Padding(
                   padding: const EdgeInsets.only(right: 15.0),
                   child: Text('Experience',
-                      style: GoogleFonts.fredokaOne(
+                      style: GoogleFonts.roboto(
                           color: Colors.black, fontSize: 25)),
                 ),
                 DropdownButton(
@@ -139,32 +173,7 @@ class _teacherState extends State<teacher> {
               padding: const EdgeInsets.only(bottom: 15.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SleekButton(
-                      child: Text('Previous',
-                          style: GoogleFonts.fredokaOne(
-                              color: Colors.black,
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple),
-                      onTap: () {},
-                    ),
-                    SleekButton(
-                      child: Text('Save',
-                          style: GoogleFonts.fredokaOne(
-                              color: Colors.black,
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple),
-                      onTap: () {},
-                    )
-                  ]),
+                  children: [_buildLoginBtn(), _buildLoginBtn1()]),
             ),
           ]),
         ),
