@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sleek_button/sleek_button.dart';
 
 class S1 extends StatelessWidget {
   Widget _buildLoginBtn() {

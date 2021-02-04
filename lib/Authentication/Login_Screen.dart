@@ -5,6 +5,7 @@ import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -161,18 +162,25 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildLoginBtn() {
-    return Container(
-      // padding: EdgeInsets.(vertical: 25.0),
-      width: 190,
-      height: 40,
-      child: Center(
-          child: Text(
-        'Log In',
-        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
-      )),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.purple),
-          borderRadius: BorderRadius.circular(9.5)),
+    return GestureDetector(
+      child: Container(
+        // padding: EdgeInsets.(vertical: 25.0),
+        width: 190,
+        height: 40,
+        child: Center(
+            child: Text(
+          'Log In',
+          style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+        )),
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.purple),
+            borderRadius: BorderRadius.circular(9.5)),
+      ),
+      onTap: () {
+        Navigator.of(context).push(PageRouteTransition(
+            animationType: AnimationType.slide_right,
+            builder: (context) => UIAnim()));
+      },
     );
   }
 

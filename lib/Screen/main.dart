@@ -33,7 +33,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: manage(),
+    home: LoginScreen(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

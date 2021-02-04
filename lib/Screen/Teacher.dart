@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sleek_button/sleek_button.dart';
 
 // ignore: camel_case_types
 class teacher extends StatefulWidget {
