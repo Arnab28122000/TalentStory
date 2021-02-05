@@ -10,6 +10,9 @@ class manage extends StatefulWidget {
 // ignore: camel_case_types
 class _manageState extends State<manage> {
   TextEditingController _controller = new TextEditingController();
+  TextEditingController _controller1 = new TextEditingController();
+  TextEditingController _controller2 = new TextEditingController();
+  TextEditingController _controller3 = new TextEditingController();
   Widget _buildLoginBtn() {
     return Container(
       // padding: EdgeInsets.(vertical: 25.0),
@@ -53,9 +56,6 @@ class _manageState extends State<manage> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(border: Border.all(color: Colors.purple)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            SizedBox(
-              height: 40,
-            ),
             Center(
               child: Text('School Management',
                   style: GoogleFonts.roboto(fontSize: 27)),
@@ -67,7 +67,7 @@ class _manageState extends State<manage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.only(left: 6.0),
                   child: Text('School\nName',
                       style: GoogleFonts.roboto(
                           color: Colors.black, fontSize: 17)),
@@ -85,7 +85,7 @@ class _manageState extends State<manage> {
                         color: Color(0xff3f08a6),
                       ),
                     ),
-                    controller: _controller,
+                    controller: _controller1,
                   ),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -136,11 +136,14 @@ class _manageState extends State<manage> {
                 )
               ],
             ),
+            SizedBox(
+              height: 30,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.only(left: 6.0),
                   child: Text('Area',
                       style: GoogleFonts.roboto(
                           color: Colors.black, fontSize: 17)),
@@ -160,7 +163,7 @@ class _manageState extends State<manage> {
                           color: Color(0xff3f08a6),
                         ),
                       ),
-                      controller: _controller,
+                      controller: _controller2,
                     ),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -178,7 +181,7 @@ class _manageState extends State<manage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.only(left: 6.0),
                   child: Text('Contact\nNumber',
                       style: GoogleFonts.roboto(
                           color: Colors.black, fontSize: 17)),
@@ -196,7 +199,7 @@ class _manageState extends State<manage> {
                         color: Color(0xff3f08a6),
                       ),
                     ),
-                    controller: _controller,
+                    controller: _controller3,
                   ),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -242,7 +245,7 @@ class _manageState extends State<manage> {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 80,
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 15.0),

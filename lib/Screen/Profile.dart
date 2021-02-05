@@ -8,6 +8,11 @@ class profile extends StatefulWidget {
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Stack(
+        alignment: Alignment.center,
+        children: [],
+      ),
+    );
   }
 }
