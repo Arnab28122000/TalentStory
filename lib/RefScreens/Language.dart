@@ -1,9 +1,44 @@
+import 'package:TalentBook/RefScreens/Second.dart';
+import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 import 'package:sleek_button/sleek_button.dart';
 
 class S5 extends StatelessWidget {
   @override
+  Widget _buildLoginBtn() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 90,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Previous',
+        style: GoogleFonts.roboto(fontSize: 17, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
+  Widget _buildLoginBtn1() {
+    return Container(
+      // padding: EdgeInsets.(vertical: 25.0),
+      width: 80,
+      height: 40,
+      child: Center(
+          child: Text(
+        'Next',
+        style: GoogleFonts.roboto(fontSize: 17, fontWeight: FontWeight.w500),
+      )),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.purple),
+          borderRadius: BorderRadius.circular(9.5)),
+    );
+  }
+
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
@@ -410,29 +445,21 @@ class S5 extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SleekButton(
-                      child: Text('Previous',
-                          style: GoogleFonts.fredokaOne(
-                              color: Color(0xff3f08a6),
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple.shade200),
-                      onTap: () {},
+                    GestureDetector(
+                      child: _buildLoginBtn(),
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteTransition(
+                            animationType: AnimationType.slide_left,
+                            builder: (context) => K12S2()));
+                      },
                     ),
-                    SleekButton(
-                      child: Text('Save',
-                          style: GoogleFonts.fredokaOne(
-                              color: Color(0xff3f08a6),
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold)),
-                      style: SleekButtonStyle.outlined(
-                          context: context,
-                          borderWidth: 3,
-                          color: Colors.purple.shade200),
-                      onTap: () {},
+                    GestureDetector(
+                      child: _buildLoginBtn1(),
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteTransition(
+                            animationType: AnimationType.slide_right,
+                            builder: (context) => UIAnim()));
+                      },
                     )
                   ],
                 ),

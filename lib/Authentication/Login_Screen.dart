@@ -1,6 +1,7 @@
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:TalentBook/Authentication/Signup.dart';
 import 'package:TalentBook/Authentication/forgotpassword.dart';
+import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -270,7 +271,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 decoration: TextDecoration.underline),
                           ),
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
+                            Navigator.of(context).push(PageRouteTransition(
+                                animationType: AnimationType.slide_right,
                                 builder: (context) => forgot()));
                           },
                         ),
@@ -307,7 +309,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
+                              Navigator.of(context).push(PageRouteTransition(
+                                  animationType: AnimationType.slide_right,
                                   builder: (context) => Sign1()));
                             },
                           ),

@@ -5,9 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
 
 // ignore: camel_case_types
-class teacher extends StatefulWidget {
+class prof extends StatefulWidget {
   @override
-  _teacherState createState() => _teacherState();
+  _profState createState() => _profState();
 }
 
 TextEditingController _controller = new TextEditingController();
@@ -26,7 +26,7 @@ List listitem1 = [
 ];
 
 // ignore: camel_case_types
-class _teacherState extends State<teacher> {
+class _profState extends State<prof> {
   TextEditingController _controller = new TextEditingController();
   Widget _buildLoginBtn() {
     return Container(

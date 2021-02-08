@@ -111,7 +111,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                   onPressed: () {},
                 ),
               ],
-              elevation: 20,
+              elevation: 10,
               leading: IconButton(
                 icon: Icon(Icons.menu),
                 color: Colors.black87,

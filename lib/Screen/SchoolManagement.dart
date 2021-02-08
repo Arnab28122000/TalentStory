@@ -1,5 +1,8 @@
+import 'package:TalentBook/RefScreens/First.dart';
+import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 // ignore: camel_case_types
 class manage extends StatefulWidget {
@@ -251,7 +254,24 @@ class _manageState extends State<manage> {
               padding: const EdgeInsets.only(bottom: 15.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [_buildLoginBtn(), _buildLoginBtn1()]),
+                  children: [
+                    GestureDetector(
+                      child: _buildLoginBtn(),
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteTransition(
+                            animationType: AnimationType.slide_left,
+                            builder: (context) => S1()));
+                      },
+                    ),
+                    GestureDetector(
+                      child: _buildLoginBtn1(),
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteTransition(
+                            animationType: AnimationType.slide_right,
+                            builder: (context) => UIAnim()));
+                      },
+                    )
+                  ]),
             ),
           ]),
         ),

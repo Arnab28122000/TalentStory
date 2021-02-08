@@ -1,5 +1,7 @@
+import 'package:TalentBook/RefScreens/First.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 class Sign1 extends StatefulWidget {
   @override
@@ -18,18 +20,26 @@ class _Sign1State extends State<Sign1> {
   @override
   Widget build(BuildContext context) {
     Widget _buildLoginBtn() {
-      return Container(
-        // padding: EdgeInsets.(vertical: 25.0),
-        width: 140,
-        height: 40,
-        child: Center(
-            child: Text(
-          'Next',
-          style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
-        )),
-        decoration: BoxDecoration(
-            border: Border.all(color: Colors.purple),
-            borderRadius: BorderRadius.circular(9.5)),
+      return GestureDetector(
+        child: Container(
+          // padding: EdgeInsets.(vertical: 25.0),
+          width: 100,
+          height: 40,
+          child: Center(
+              child: Text(
+            'Next',
+            style:
+                GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+          )),
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.purple),
+              borderRadius: BorderRadius.circular(9.5)),
+        ),
+        onTap: () {
+          Navigator.of(context).push(PageRouteTransition(
+              animationType: AnimationType.slide_right,
+              builder: (context) => S1()));
+        },
       );
     }
 
@@ -291,7 +301,7 @@ class _Sign1State extends State<Sign1> {
                             ),
                           ),
                           SizedBox(
-                            height: 30,
+                            height: 50,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 0.0),

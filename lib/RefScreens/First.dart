@@ -1,23 +1,12 @@
+import 'package:TalentBook/RefScreens/Second.dart';
+import 'package:TalentBook/Screen/SchoolManagement.dart';
+import 'package:TalentBook/Screen/Teacher.dart';
+import 'package:TalentBook/Screen/professional.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 class S1 extends StatelessWidget {
-  Widget _buildLoginBtn() {
-    return Container(
-      // padding: EdgeInsets.(vertical: 25.0),
-      width: 120,
-      height: 50,
-      child: Center(
-          child: Text(
-        'Next',
-        style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
-      )),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.purple),
-          borderRadius: BorderRadius.circular(9.5)),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -41,6 +30,9 @@ class S1 extends StatelessWidget {
                 style: GoogleFonts.roboto(color: Colors.black, fontSize: 28),
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
             GestureDetector(
               child: Container(
                 height: 68,
@@ -62,7 +54,11 @@ class S1 extends StatelessWidget {
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(PageRouteTransition(
+                    animationType: AnimationType.slide_right,
+                    builder: (context) => K12S2()));
+              },
             ),
             SizedBox(
               height: 20,
@@ -90,7 +86,11 @@ class S1 extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(PageRouteTransition(
+                    animationType: AnimationType.slide_right,
+                    builder: (context) => teacher()));
+              },
             ),
             SizedBox(
               height: 20,
@@ -116,7 +116,11 @@ class S1 extends StatelessWidget {
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(PageRouteTransition(
+                    animationType: AnimationType.slide_right,
+                    builder: (context) => prof()));
+              },
             ),
             SizedBox(
               height: 20,
@@ -141,12 +145,15 @@ class S1 extends StatelessWidget {
                       style: TextStyle(fontSize: 25, color: Colors.black)),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(PageRouteTransition(
+                    animationType: AnimationType.slide_right,
+                    builder: (context) => manage()));
+              },
             ),
             SizedBox(
               height: 60,
             ),
-            _buildLoginBtn(),
           ],
         ),
       ),
