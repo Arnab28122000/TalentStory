@@ -7,6 +7,8 @@ import 'package:TalentBook/RefScreens/Connector.dart';
 import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/RefScreens/Language.dart';
 import 'package:TalentBook/RefScreens/Second.dart';
+import 'package:TalentBook/RefScreens/tileCirriculum.dart';
+import 'package:TalentBook/Screen/Profile.dart';
 import 'package:TalentBook/Screen/SchoolManagement.dart';
 import 'package:TalentBook/Screen/Teacher.dart';
 import 'package:TalentBook/Screen/arts.dart';
@@ -33,7 +35,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: manage(),
+    home: UIAnim(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

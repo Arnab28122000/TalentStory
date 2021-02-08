@@ -8,37 +8,14 @@ class UIAnim extends StatefulWidget {
 
 class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  Animation<double> animation,
-      _animation,
-      _animation1,
-      _animation2,
-      _animation3,
-      _animation4,
-      _animation5,
-      _animation6,
-      _animation7;
+  Animation<double> _animation;
+
   @override
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 3));
-    animation = new Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.bounceInOut));
-    _animation = new Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation1 = new Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation2 = new Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation3 = new Tween(begin: 1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation4 = new Tween(begin: 1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation5 = new Tween(begin: 1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation6 = new Tween(begin: 1.0, end: 0.0).animate(
-        CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
-    _animation7 = new Tween(begin: 1.0, end: 0.0).animate(
+        AnimationController(vsync: this, duration: Duration(seconds: 5));
+    _animation = new Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
   }
 
@@ -51,8 +28,6 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
   int _currentindex = 0;
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     _controller.forward();
     return AnimatedBuilder(
       animation: _controller,
@@ -167,11 +142,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                width * _animation.value,
-                                height * _animation.value,
-                                height * _animation.value),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
@@ -202,9 +174,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                0, height * _animation1.value, 0),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
@@ -235,11 +206,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                _animation2.value * width,
-                                _animation2.value * height,
-                                0),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
@@ -278,11 +246,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                _animation3.value * width,
-                                _animation3.value * height,
-                                0),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
@@ -313,11 +278,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                _animation4.value * width,
-                                _animation4.value * height,
-                                0),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
@@ -348,11 +310,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          Transform(
-                            transform: Matrix4.translationValues(
-                                _animation5.value * width,
-                                _animation5.value * height,
-                                0),
+                          FadeTransition(
+                            opacity: _animation,
                             child: Container(
                               width: 100,
                               height: 100,
