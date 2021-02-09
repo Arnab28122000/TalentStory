@@ -39,6 +39,7 @@ class _tileState extends State<tile> {
             height: 10,
           ),
           DropdownButton(
+            hint: Text("WEEK"),
             items: weeks.map((String dropDownStringItem) {
               return DropdownMenuItem<String>(
                   value: dropDownStringItem, child: Text(dropDownStringItem));
@@ -117,42 +118,40 @@ class TileMaker extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.black)),
         padding: EdgeInsets.all(10),
-        child: Expanded(
-          child: Column(
-            children: <Widget>[
-              Text(
-                "WEEK $weekCounter",
-                style: GoogleFonts.average(
-                    textStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-              ), //week counter need to be plus 1
-              TextField(
-                controller: chapterNameController,
-                decoration: InputDecoration(
-                    hintText: "Chapter Name", icon: Icon(Icons.book)),
+        child: Column(
+          children: <Widget>[
+            Text(
+              "WEEK ${weekCounter + 1}",
+              style: GoogleFonts.average(
+                  textStyle:
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+            ), //week counter need to be plus 1
+            TextField(
+              controller: chapterNameController,
+              decoration: InputDecoration(
+                  hintText: "Chapter Name", icon: Icon(Icons.book)),
+            ),
+            TextField(
+              controller: chapterdescriptionController,
+              decoration: InputDecoration(
+                  hintText: "Description", icon: Icon(Icons.book)),
+              keyboardType: TextInputType.multiline,
+            ),
+            TextField(
+              controller: numberVideoController,
+              decoration: InputDecoration(
+                  hintText: "Number Of Videos", icon: Icon(Icons.video_call)),
+              keyboardType: TextInputType.number,
+            ),
+            TextField(
+              controller: hoursController,
+              decoration: InputDecoration(
+                hintText: "Number of hours required",
+                icon: Icon(Icons.timelapse_rounded),
               ),
-              TextField(
-                controller: chapterdescriptionController,
-                decoration: InputDecoration(
-                    hintText: "Description", icon: Icon(Icons.book)),
-                keyboardType: TextInputType.multiline,
-              ),
-              TextField(
-                controller: numberVideoController,
-                decoration: InputDecoration(
-                    hintText: "Number Of Videos", icon: Icon(Icons.video_call)),
-                keyboardType: TextInputType.number,
-              ),
-              TextField(
-                controller: hoursController,
-                decoration: InputDecoration(
-                  hintText: "Number of hours required",
-                  icon: Icon(Icons.timelapse_rounded),
-                ),
-                keyboardType: TextInputType.number,
-              ),
-            ],
-          ),
+              keyboardType: TextInputType.number,
+            ),
+          ],
         ),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:TalentBook/Authentication/OTP_Screen.dart';
 import 'package:TalentBook/Authentication/Signup.dart';
 import 'package:TalentBook/Authentication/forgotpassword.dart';
-import 'package:TalentBook/RefScreens/First.dart';
 import 'package:TalentBook/Screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,8 +14,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
-  TextEditingController _controller = new TextEditingController();
-  TextEditingController _controller1 = TextEditingController();
+  TextEditingController _phonecontroller = new TextEditingController();
+  TextEditingController _passwordcontroller1 = TextEditingController();
 
   Widget _buildEmailTF() {
     return Column(
@@ -38,7 +37,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   //fontFamily: GoogleFonts.fredokaOne(color: Colors.black)
                 ),
                 decoration: InputDecoration(
-                  border: InputBorder.none,
+                  fillColor: Colors.grey[300],
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(9)),
                   contentPadding: EdgeInsets.only(top: 12.0, right: 20),
                   prefixIcon: Icon(
                     Icons.phone,
@@ -52,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 maxLength: 10,
                 keyboardType: TextInputType.number,
-                controller: _controller,
+                controller: _phonecontroller,
               ),
             ),
           ],
@@ -91,12 +94,17 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: Alignment.centerLeft,
               height: 60.0,
               child: TextField(
+                obscureText: true,
                 style: TextStyle(
                   color: Colors.black,
                   //fontFamily: GoogleFonts.fredokaOne(color: Colors.black)
                 ),
                 decoration: InputDecoration(
-                  border: InputBorder.none,
+                  fillColor: Colors.grey[300],
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(9)),
                   contentPadding: EdgeInsets.only(top: 14.0),
                   prefixIcon: Icon(
                     Icons.security,
@@ -110,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 // maxLength: 6,
                 keyboardType: TextInputType.text,
-                controller: _controller1,
+                controller: _passwordcontroller1,
               ),
             ),
           ],
@@ -163,17 +171,19 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildLoginBtn() {
-    return GestureDetector(
+    return InkWell(
       child: Container(
         // padding: EdgeInsets.(vertical: 25.0),
-        width: 190,
+        width: 230,
         height: 40,
         child: Center(
             child: Text(
           'Log In',
-          style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500),
+          style: GoogleFonts.roboto(
+              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
         )),
         decoration: BoxDecoration(
+            color: Colors.purple,
             border: Border.all(color: Colors.purple),
             borderRadius: BorderRadius.circular(9.5)),
       ),
@@ -245,13 +255,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 30,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            right: 40.0, top: 8, bottom: 8),
-                        child: Text('Welcome Learner',
-                            style: GoogleFonts.roboto(
-                                color: Colors.black, fontSize: 28)),
-                      ),
+                      Text('Welcome Learner',
+                          style: GoogleFonts.roboto(
+                              color: Colors.black, fontSize: 30)),
                       SizedBox(height: 30.0),
                       _buildEmailTF(),
                       SizedBox(
@@ -261,26 +267,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 20.0,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 120.0),
-                        child: InkWell(
-                          child: Text(
-                            'Forgot Password?',
-                            style: GoogleFonts.roboto(
-                                color: Colors.black,
-                                decoration: TextDecoration.underline),
-                          ),
-                          onTap: () {
-                            Navigator.of(context).push(PageRouteTransition(
-                                animationType: AnimationType.slide_right,
-                                builder: (context) => forgot()));
-                          },
+                      InkWell(
+                        child: Text(
+                          'Forgot Password?',
+                          style: GoogleFonts.roboto(
+                              color: Colors.black,
+                              decoration: TextDecoration.underline),
                         ),
+                        onTap: () {
+                          Navigator.of(context).push(PageRouteTransition(
+                              animationType: AnimationType.slide_right,
+                              builder: (context) => forgot()));
+                        },
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 10,
                       ),
-                      _buildRememberMeCheckbox(),
+                      // _buildRememberMeCheckbox(),
                       SizedBox(
                         height: 30,
                       ),
@@ -293,17 +296,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           Center(
                               child: Padding(
-                            padding: const EdgeInsets.only(left: 50.0),
+                            padding: const EdgeInsets.only(left: 55.0),
                             child: Text('Dont have an account?'),
                           )),
                           InkWell(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 30),
+                              padding: const EdgeInsets.only(left: 5),
                               child: Text(
                                 'Sign In',
                                 style: GoogleFonts.roboto(
-                                    color: Colors.black,
-                                    fontSize: 19,
+                                    color: Colors.purple[700],
+                                    fontSize: 15,
                                     decoration: TextDecoration.underline),
                                 // fontWeight: FontWeight.bold),
                               ),

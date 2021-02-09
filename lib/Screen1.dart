@@ -1,5 +1,12 @@
+import 'package:TalentBook/RefScreens/CodingClass.dart';
+import 'package:TalentBook/RefScreens/Lang.dart';
+import 'package:TalentBook/Screen/arts.dart';
+import 'package:TalentBook/Screen/mission.dart';
+import 'package:TalentBook/sports.dart';
+import 'package:TalentBook/yoga.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 class UIAnim extends StatefulWidget {
   @override
@@ -21,8 +28,8 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   int _currentindex = 0;
@@ -102,19 +109,19 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               actions: <Widget>[
                 IconButton(
                   icon: Icon(Icons.notification_important),
-                  color: Colors.black,
+                  color: Colors.white,
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: Icon(Icons.search),
-                  color: Colors.black,
+                  color: Colors.white,
                   onPressed: () {},
                 ),
               ],
               elevation: 10,
               leading: IconButton(
                 icon: Icon(Icons.menu),
-                color: Colors.black87,
+                color: Colors.white,
                 onPressed: () {},
               ),
             ),
@@ -144,98 +151,119 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                         children: [
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(color: Colors.purple),
-                                color: Colors.white,
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  border: Border.all(color: Colors.purple),
+                                  color: Colors.white,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.code_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Coding',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.code_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Coding',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => CodingClass()));
+                              },
                             ),
                           ),
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.white,
-                                border: Border.all(color: Colors.purple),
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.purple),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.emoji_emotions_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Mission',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.emoji_emotions_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Mission',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => Mission()));
+                              },
                             ),
                           ),
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.white,
-                                border: Border.all(color: Colors.purple),
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.purple),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.art_track_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Arts',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.art_track_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Arts',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => Arts()));
+                              },
                             ),
                           ),
                         ],
@@ -248,98 +276,119 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                         children: [
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.white,
-                                border: Border.all(color: Colors.purple),
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.purple),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.sports_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Sports',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.sports_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Sports',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => Sports()));
+                              },
                             ),
                           ),
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.white,
-                                border: Border.all(color: Colors.purple),
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.purple),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.run_circle_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Yoga',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.run_circle_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Yoga',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => Yoga()));
+                              },
                             ),
                           ),
                           FadeTransition(
                             opacity: _animation,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.white,
-                                border: Border.all(color: Colors.purple),
+                            child: GestureDetector(
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.purple),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.language_outlined,
+                                      size: 40,
+                                      color: Color(0xff3f08a6),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Languages',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    )
+                                  ],
+                                ),
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.language_outlined,
-                                    size: 40,
-                                    color: Color(0xff3f08a6),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Languages',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
+                              onTap: () {
+                                Navigator.of(context).push(PageRouteTransition(
+                                    animationType: AnimationType.slide_right,
+                                    builder: (context) => S6()));
+                              },
                             ),
                           ),
                         ],
