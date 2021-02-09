@@ -1,4 +1,5 @@
 //import 'package:coding_class_functionaltiy/UploadDocuments.dart';
+import 'package:coding_class_functionaltiy/AssignedDocuments.dart';
 import 'package:coding_class_functionaltiy/UploadDocuments.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,8 @@ class _CodingClassState extends State<CodingClass> {
     classRoom(),
     students(),
     curriculum(),
-    Assignment(),
+    AssignedDocuments(),
+    // Assignment(),
   ];
 
   @override

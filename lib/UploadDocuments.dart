@@ -1,7 +1,11 @@
 // import 'dart:html';
 
+import 'dart:io';
+
+// import 'package:filesystem_picker/filesystem_picker.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-// import 'package:file_picker/file_picker.dart';
+
 import 'package:flutter/services.dart';
 
 class UpLoadDocuments extends StatefulWidget {
@@ -10,10 +14,40 @@ class UpLoadDocuments extends StatefulWidget {
 }
 
 class _UpLoadDocumentsState extends State<UpLoadDocuments> {
+  void OpenFielExplorer() async {
+    // FilePickerResult result = await FilePicker.platform.pickFiles();
+    // if (result != null) {
+    //   File file = File(result.files.single.path);
+    // }
+    FilePickerResult result = await FilePicker.platform.pickFiles();
+    if (result != null) {
+      PlatformFile file = result.files.first;
+      print(file.name);
+      print(file.bytes);
+      print(file.size);
+      print(file.extension);
+      print(file.path);
+    }
+  }
+
+  Widget files(filetobeprinted) {
+    return Expanded(
+        child: Column(
+      children: <Widget>[
+        Text(filetobeprinted.name),
+        Text(filetobeprinted.bytes),
+        Text(filetobeprinted.size),
+        Text(filetobeprinted.extension),
+        Text(filetobeprinted.path)
+      ],
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color(0xFF3f08a6),
         title: Text("upload Documents"),
         actions: <Widget>[
           GestureDetector(
@@ -34,7 +68,23 @@ class _UpLoadDocumentsState extends State<UpLoadDocuments> {
             Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: RaisedButton(
-                  onPressed: () async {},
+                  onPressed: () async {
+                    print("pressed");
+
+                    OpenFielExplorer();
+                    print("pressed 1");
+                    // FilePickerResult result =
+                    //     await FilePicker.platform.pickFiles();
+                    // if (result != null) {
+                    //   PlatformFile file = result.files.first;
+                    //   print(file.name);
+                    //   print(file.bytes);
+                    //   print(file.size);
+                    //   print(file.extension);
+                    //   print(file.path);
+                    //   // files(file);
+                    // }
+                  },
                   child: Text("Get Documents"),
                 )),
             Padding(
@@ -81,7 +131,7 @@ class _UpLoadDocumentsState extends State<UpLoadDocuments> {
                 },
                 decoration: InputDecoration(hintText: "Points"),
               ),
-            )
+            ),
           ],
         ),
       ),
