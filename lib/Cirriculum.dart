@@ -1,3 +1,8 @@
+import 'dart:convert';
+import 'dart:html';
+import 'dart:io';
+import 'dart:js';
+
 import 'package:coding_class_functionaltiy/tileCIrriculum.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -153,3 +158,27 @@ class _curriculumState extends State<curriculum> {
     );
   }
 }
+
+// Widget future() {
+//   return FutureBuilder(
+//     builder: (context, snapshot) {
+//       if (!snapshot.hasData) {
+//         return Center(child: CircularProgressIndicator());
+//       } else if (snapshot.hasData) {
+//         //put the listVIew
+//       } else if (snapshot.hasError) {
+//         return Container(
+//           child: Text("Has no cirriculum yet"),
+//         );
+//       }
+//     },
+//     future: getData(),
+//   );
+// }
+
+// Future<void> getData() async {
+//   var url = "";
+//   var res;
+//   // await http.get(url)
+//   return jsonDecode(res.body);
+// }
