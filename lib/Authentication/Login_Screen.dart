@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Container(
               alignment: Alignment.centerLeft,
-              height: 60.0,
+              height: 70.0,
               child: TextField(
                 style: TextStyle(
                   color: Colors.black,
