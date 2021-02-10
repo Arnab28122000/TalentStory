@@ -1,5 +1,6 @@
 import 'package:TalentBook/RefScreens/CodingClass.dart';
 import 'package:TalentBook/RefScreens/Lang.dart';
+import 'package:TalentBook/Screen/Drawer.dart';
 import 'package:TalentBook/Screen/arts.dart';
 import 'package:TalentBook/Screen/mission.dart';
 import 'package:TalentBook/sports.dart';
@@ -40,6 +41,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
       animation: _controller,
       builder: (BuildContext context, Widget child) {
         return Scaffold(
+            // drawer: Drawer(child: ,),
             bottomNavigationBar: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
               selectedItemColor: Color(0xff3f08a6),
@@ -95,6 +97,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 });
               },
             ),
+            drawer: NavDrawer(),
             appBar: AppBar(
               title: Text('Talent Story',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
@@ -106,6 +109,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
               //         color: Colors.white)),
 
               //centerTitle: true,
+
               actions: <Widget>[
                 IconButton(
                   icon: Icon(Icons.notification_important),
@@ -119,11 +123,6 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 ),
               ],
               elevation: 10,
-              leading: IconButton(
-                icon: Icon(Icons.menu),
-                color: Colors.white,
-                onPressed: () {},
-              ),
             ),
             floatingActionButton: FloatingActionButton(
                 foregroundColor: Colors.white,
