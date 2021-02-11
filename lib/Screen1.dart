@@ -79,7 +79,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                       Icons.calendar_today_outlined,
                       color: Colors.grey.shade500,
                     ),
-                    title: Text('to-do')),
+                    title: Text('Events')),
                 BottomNavigationBarItem(
                     activeIcon: Icon(
                       Icons.people,

@@ -51,9 +51,9 @@ class NavDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(Icons.privacy_tip_outlined),
             title: Text(
-              'Settings',
+              'Privacy Policy',
               style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),
             ),
             dense: true,
