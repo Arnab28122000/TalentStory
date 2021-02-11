@@ -89,7 +89,7 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                       Icons.people,
                       color: Colors.grey.shade500,
                     ),
-                    title: Text('people'))
+                    title: Text('profile'))
               ],
               onTap: (index) {
                 setState(() {

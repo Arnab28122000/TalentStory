@@ -63,6 +63,7 @@ flutter:
    - Assets/Pics/comb.jpg
    - Assets/Pics/logo1.png
    - Assets/Pics/computer-work.png
+   - Assets/Pics/Error.png
   
   fonts:
     - family: OpenSans

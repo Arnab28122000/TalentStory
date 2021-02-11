@@ -1,3 +1,4 @@
+import 'package:TalentBook/RefScreens/error.dart';
 import 'package:TalentBook/Splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: splash(),
+    home: Error(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));
