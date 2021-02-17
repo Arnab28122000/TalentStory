@@ -3,6 +3,7 @@ import 'package:TalentBook/RefScreens/Lang.dart';
 import 'package:TalentBook/Screen/Drawer.dart';
 import 'package:TalentBook/Screen/arts.dart';
 import 'package:TalentBook/Screen/mission.dart';
+import 'package:TalentBook/Screen/notificationUI.dart';
 import 'package:TalentBook/sports.dart';
 import 'package:TalentBook/yoga.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +115,11 @@ class _UIAnimState extends State<UIAnim> with SingleTickerProviderStateMixin {
                 IconButton(
                   icon: Icon(Icons.notification_important),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(PageRouteTransition(
+                        animationType: AnimationType.slide_right,
+                        builder: (context) => notificationUI()));
+                  },
                 ),
                 IconButton(
                   icon: Icon(Icons.search),

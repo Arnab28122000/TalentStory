@@ -1,6 +1,7 @@
 //import 'package:coding_class_functionaltiy/UploadDocuments.dart';
 
 import 'package:TalentBook/RefScreens/AssignedDocuments.dart';
+import 'package:TalentBook/Screen/homescreen.dart';
 import 'package:flutter/material.dart';
 
 import 'Cirriculum.dart';
@@ -18,7 +19,8 @@ class _CodingClassState extends State<CodingClass> {
   //classRoom classroom = new classRoom();
 //list of all tabviews
   List<Widget> containers = [
-    classRoom(),
+    HomeScreen(),
+    // classRoom(),
     students(),
     curriculum(),
     AssignedDocuments(),

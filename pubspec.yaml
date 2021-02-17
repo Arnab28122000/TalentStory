@@ -37,10 +37,17 @@ dependencies:
   route_transitions: ^1.0.2
   sleek_button: ^0.1.1
   file_picker: ^2.1.6
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.8.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "Assets/Pics/logo1.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -64,6 +71,7 @@ flutter:
    - Assets/Pics/logo1.png
    - Assets/Pics/computer-work.png
    - Assets/Pics/Error.png
+   
   
   fonts:
     - family: OpenSans

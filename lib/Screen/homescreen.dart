@@ -7,29 +7,29 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        brightness: Brightness.dark,
-        elevation: 8,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          color: Colors.white,
-          onPressed: () {},
-        ),
-        title: Text(
-          'Inbox',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: const Color(0xFF3f08a6),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            color: Colors.white,
-            onPressed: () {},
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   brightness: Brightness.dark,
+      //   elevation: 8,
+      //   leading: IconButton(
+      //     icon: Icon(Icons.menu),
+      //     color: Colors.white,
+      //     onPressed: () {},
+      //   ),
+      //   title: Text(
+      //     'Inbox',
+      //     style: TextStyle(
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      //   backgroundColor: const Color(0xFF3f08a6),
+      //   actions: <Widget>[
+      //     IconButton(
+      //       icon: Icon(Icons.search),
+      //       color: Colors.white,
+      //       onPressed: () {},
+      //     ),
+      //   ],
+      // ),
       body: ListView.builder(
         itemCount: chats.length,
         itemBuilder: (BuildContext context, int index) {
