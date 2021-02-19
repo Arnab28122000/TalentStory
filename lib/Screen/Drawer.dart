@@ -1,7 +1,28 @@
+import 'package:TalentBook/Screen/about.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NavDrawer extends StatelessWidget {
+  _launchURL() async {
+    const url = 'https://thetalentbook.co.in/privacy_policy.html';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURL1() async {
+    const url = 'https://talentstory.in/#AboutAnchor';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -42,7 +63,10 @@ class NavDrawer extends StatelessWidget {
             height: 20,
           ),
           ListTile(
-            leading: Icon(Icons.person),
+            leading: Icon(
+              Icons.person_outlined,
+              color: Color(0xff3f08a6),
+            ),
             title: Text(
               'Profile',
               style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),
@@ -51,16 +75,52 @@ class NavDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.privacy_tip_outlined),
+            leading: Icon(
+              Icons.feedback_outlined,
+              color: Color(0xff3f08a6),
+            ),
             title: Text(
-              'Privacy Policy',
+              'Feedback',
               style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),
             ),
             dense: true,
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.arrow_back),
+            leading: Icon(
+              Icons.info_outline,
+              color: Color(0xff3f08a6),
+            ),
+            title: Text(
+              'About us',
+              style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),
+            ),
+            dense: true,
+            onTap: () {
+              Navigator.of(context).push(PageRouteTransition(
+                  animationType: AnimationType.slide_right,
+                  builder: (context) => About()));
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.privacy_tip_outlined,
+              color: Color(0xff3f08a6),
+            ),
+            title: Text(
+              'Privacy Policy',
+              style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),
+            ),
+            dense: true,
+            onTap: () {
+              _launchURL();
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.arrow_back,
+              color: Color(0xff3f08a6),
+            ),
             title: Text(
               'Logout',
               style: GoogleFonts.roboto(color: Colors.black, fontSize: 18),

@@ -14,7 +14,7 @@ void main() async {
   runApp(new MaterialApp(
     theme: ThemeData(
         bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff3f08a6))),
-    home: UIAnim(),
+    home: PostPage(),
     //darkTheme: ThemeData.dark(),
     debugShowCheckedModeBanner: false,
   ));

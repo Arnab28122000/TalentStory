@@ -37,6 +37,7 @@ dependencies:
   route_transitions: ^1.0.2
   sleek_button: ^0.1.1
   file_picker: ^2.1.6
+  url_launcher: ^5.7.10
   
 
 dev_dependencies:
@@ -71,6 +72,9 @@ flutter:
    - Assets/Pics/logo1.png
    - Assets/Pics/computer-work.png
    - Assets/Pics/Error.png
+   - Assets/Privacy/privacy.txt
+   - Assets/Pics/about.png
+   - Assets/logos/comment.png
    
   
   fonts:
